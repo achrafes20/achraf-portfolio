@@ -5,6 +5,7 @@ export const translations = {
       about: "À propos",
       projects: "Projets",
       experience: "Expérience",
+      certifications: "Certifications",
       contact: "Contact",
       downloadCv: "Télécharger le CV",
     },
@@ -24,7 +25,7 @@ export const translations = {
         "Ingénieur en informatique passionné par le développement de solutions innovantes et l'optimisation des systèmes.",
       sectionLabel: "Présentation",
       bio: [
-        "Étudiant en 4ème année de Génie Informatique à l'ENSA de Tétouan, je me spécialise dans le développement logiciel et l'architecture des systèmes.",
+        "Étudiant en 5ème année de Génie Informatique à l'ENSA de Tétouan, je me spécialise dans le développement logiciel et l'architecture des systèmes.",
         "Mon parcours m'a permis d'acquérir une expertise solide dans les technologies modernes du web, les bases de données et les méthodologies DevOps.",
         "Je suis particulièrement intéressé par l'intelligence artificielle, les systèmes distribués et les bonnes pratiques d'ingénierie logicielle.",
       ],
@@ -157,6 +158,13 @@ export const translations = {
           description:
             "Formation approfondie en architecture logicielle, bases de données, réseaux et systèmes d'information. Acquisition de compétences en développement web, intelligence artificielle et ingénierie logicielle.",
         },
+        pfa: {
+          date: "Juillet - Septembre 2026",
+          title: "Projet de Fin d'Année (PFA) - Développeur Full-Stack (Mentora RH)",
+          place: "HB Développement - Tétouan",
+          description:
+            "Conception et développement d'une solution SIRH (Mentora RH) en architecture Full-Stack. Mise en place d'une authentification JWT hybride, d'un système de pointage BYOD, de la gestion des congés (Ledger), et génération automatisée de documents RH (PDF, Mattermost, n8n).",
+        },
         work: {
           date: "Juin - Août 2025",
           title: "Stage en Développement Web Full-Stack",
@@ -172,6 +180,13 @@ export const translations = {
             "Option française. Mention Très Bien. Formation scientifique approfondie préparant aux études d'ingénierie.",
         },
       },
+    },
+    certifications: {
+      title: "Certifications",
+      subtitle: "Certifications professionnelles validant mes compétences techniques.",
+      sectionLabel: "Certifications",
+      viewCertificate: "Voir le certificat",
+      coursesLabel: "Cours inclus :",
     },
     contact: {
       headerTitle: "Contactez-moi",
@@ -238,6 +253,7 @@ export const translations = {
       about: "About",
       projects: "Projects",
       experience: "Experience",
+      certifications: "Certifications",
       contact: "Contact",
       downloadCv: "Download CV",
     },
@@ -257,7 +273,7 @@ export const translations = {
         "Software engineer passionate about building innovative solutions and optimizing systems.",
       sectionLabel: "About",
       bio: [
-        "I am a fourth-year Computer Engineering student at ENSA Tétouan, specializing in software development and systems architecture.",
+        "I am a fifth-year Computer Engineering student at ENSA Tétouan, specializing in software development and systems architecture.",
         "My journey has given me solid expertise in modern web technologies, databases, and DevOps methodologies.",
         "I am particularly interested in artificial intelligence, distributed systems, and software engineering best practices.",
       ],
@@ -393,6 +409,13 @@ export const translations = {
             "Advanced training in software architecture, databases, networks, and information systems, with practical skills in web development, artificial intelligence, and software engineering.",
           tech: ["Software Architecture", "Databases", "Networks", "AI"],
         },
+        pfa: {
+          date: "July - September 2026",
+          title: "End-of-Year Project (PFA) - Full-Stack Developer (Mentora HR)",
+          place: "HB Développement - Tétouan",
+          description:
+            "Designed and developed the Mentora HRIS solution using a Full-Stack architecture. Implemented a hybrid JWT authentication, an innovative BYOD attendance system, a Ledger-based leave management system, and automated HR document generation (PDF, Mattermost, n8n).",
+        },
         work: {
           date: "June - August 2025",
           title: "Full-Stack Web Development Internship",
@@ -408,6 +431,13 @@ export const translations = {
             "French option. Graduated with highest honors after an advanced scientific curriculum preparing students for engineering studies.",
         },
       },
+    },
+    certifications: {
+      title: "Certifications",
+      subtitle: "Professional certifications validating my technical skills.",
+      sectionLabel: "Certifications",
+      viewCertificate: "View Certificate",
+      coursesLabel: "Included Courses:",
     },
     contact: {
       headerTitle: "Contact me",

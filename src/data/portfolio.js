@@ -37,6 +37,7 @@ export const navLinks = [
   { label: "À propos", href: "#about" },
   { label: "Projets", href: "#projects" },
   { label: "Expérience", href: "#experience" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -117,7 +118,7 @@ export const projects = [
     description:
       "Plateforme full-stack de gestion de projets agiles inspirée de Jira, avec planning, Kanban, diagrammes collaboratifs, chronologie Gantt, rôles, chat temps réel et intégration GitHub.",
     tech: ["Spring Boot", "React", "TypeScript", "MySQL", "WebSocket"],
-    repo: "https://github.com/achrafes20/AgileFlow-Demo",
+    repo: "https://github.com/Houssam265/AgileFlow.git",
     images: [
       "/images/AgileFlow/img 1.png",
       "/images/AgileFlow/img 2.png",
@@ -169,7 +170,7 @@ export const projects = [
     description:
       "Application web ASP.NET complète pour une coopérative marocaine avec gestion produits, commandes, clients, panier et dashboard administrateur.",
     tech: ["ASP.NET", "C#", "SQL Server", "Entity Framework"],
-    repo: "https://github.com/achrafes20/Projet-E-commerce-Cooperative",
+    repo: "https://github.com/Houssam265/Application-E-commerce--DotNet-.git",
     images: [
       "/images/ecommerce/img1.png",
       "/images/ecommerce/img2.png",
@@ -184,7 +185,7 @@ export const projects = [
     description:
       "Plateforme web pour centraliser les demandes administratives des étudiants avec traitement automatisé côté administration.",
     tech: ["Node.js", "React", "MySQL", "JWT"],
-    repo: "https://github.com/achrafes20/Espace-Etudiant",
+    repo: "https://github.com/achrafes20/projet-espace-etudiant.git",
     images: [
       "/images/espace_etudiant/img1.png",
       "/images/espace_etudiant/img2.png",
@@ -237,7 +238,7 @@ export const projects = [
     description:
       "Application PHP/MySQL pour la gestion des événements étudiants avec système de rôles, vérification email et attestations PDF automatisées.",
     tech: ["PHP", "MySQL", "JavaScript", "Dompdf"],
-    repo: "https://github.com/achrafes20/Campus-Events",
+    repo: "https://github.com/Taha7486/Mini-Projet.git",
     images: [
       "/images/event/img1.png",
       "/images/event/img2.png",
@@ -304,7 +305,7 @@ export const projects = [
     description:
       "Application microservices avec conteneurisation Docker pour la gestion complète d'une salle de sport (membres, planning, paiements).",
     tech: ["Docker", "Laravel", "Angular", "MySQL"],
-    repo: "https://github.com/achrafes20/Gestion-Salle-Sport",
+    repo: "https://github.com/achrafes20/projet-web.git",
     images: ["/images/fitness/img1.png", "/images/fitness/img2.png"],
   },
   {
@@ -361,6 +362,16 @@ export const timeline = [
     tech: ["Architecture Logicielle", "Bases de Données", "Réseaux", "IA"],
   },
   {
+    type: "pfa",
+    date: "Juillet - Septembre 2026",
+    title: "Stage PFA - Développeur Full-Stack (Mentora RH)",
+    place: "HB Développement - Tétouan",
+    description:
+      "Conception et développement d'une solution SIRH (Mentora RH) avec une architecture Full-Stack. Mise en place d'une authentification JWT hybride, d'un système de pointage BYOD, de la gestion des congés via le pattern Ledger, et génération automatisée de documents RH.",
+    techLabel: "Environnement technique :",
+    tech: ["Spring Boot", "React", "PostgreSQL", "JWT", "Tailwind CSS"],
+  },
+  {
     type: "work",
     date: "Juin - Août 2025",
     title: "Stage en Développement Web Full-Stack",
@@ -379,4 +390,36 @@ export const timeline = [
       "Option française. Mention Très Bien. Formation scientifique approfondie préparant aux études d'ingénierie.",
     tech: [],
   },
+];
+
+export const certifications = [
+  {
+    id: "ibm-devops",
+    title: "IBM Applied DevOps Engineering",
+    issuer: "IBM / Coursera",
+    link: "https://coursera.org/share/c24ebd77981cf8828665d32987f161b0",
+    skills: ["Docker", "Kubernetes", "OpenShift", "CI/CD", "Microservices", "Agile", "Scrum", "TDD", "Security", "Observability"],
+    images: [
+      "/images/certifications/ibm-devops-global.png",
+      "/images/certifications/ibm-devops-1.png",
+      "/images/certifications/ibm-devops-2.png",
+      "/images/certifications/ibm-devops-3.png",
+      "/images/certifications/ibm-devops-4.png",
+      "/images/certifications/ibm-devops-5.png",
+      "/images/certifications/ibm-devops-6.png",
+      "/images/certifications/ibm-devops-7.png",
+      "/images/certifications/ibm-devops-8.png",
+      "/images/certifications/ibm-devops-9.png"
+    ]
+  },
+  {
+    id: "machine-learning",
+    title: "Machine\nLearning",
+    issuer: "IBM / Coursera",
+    link: "https://coursera.org/share/92e680d8213d94b61e0f64a14b956acd",
+    skills: ["Machine Learning", "Python", "Data Science", "AI Models"],
+    images: [
+      "/images/certifications/ml-certificate.png"
+    ]
+  }
 ];

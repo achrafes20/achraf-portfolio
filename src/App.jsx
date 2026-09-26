@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   ArrowUp,
+  Award,
   BriefcaseBusiness,
   ChevronLeft,
   ChevronRight,
@@ -25,6 +26,7 @@ import {
   Server,
   Sun,
   Smartphone,
+  ExternalLink,
   ZoomIn,
   X,
 } from "lucide-react";
@@ -38,6 +40,7 @@ import {
   projects,
   skills,
   timeline,
+  certifications,
 } from "./data/portfolio.js";
 
 const skillIcons = {
@@ -52,6 +55,7 @@ const skillIcons = {
 
 const timelineIcons = {
   formation: GraduationCap,
+  pfa: BriefcaseBusiness,
   work: BriefcaseBusiness,
   school: School,
 };
@@ -61,6 +65,7 @@ const navItems = [
   { key: "about", href: "#about" },
   { key: "projects", href: "#projects" },
   { key: "experience", href: "#experience" },
+  { key: "certifications", href: "#certifications" },
   { key: "contact", href: "#contact" },
 ];
 
@@ -442,6 +447,62 @@ function App() {
               </article>
             );
           })}
+        </section>
+
+        <SectionHeader
+          id="certifications"
+          title={t.certifications.title}
+          subtitle={t.certifications.subtitle}
+        />
+        <section className="certifications-section" aria-label={t.certifications.sectionLabel}>
+          <div className="cert-grid">
+            {certifications.map((cert) => (
+              <article className="cert-card" key={cert.id}>
+                <div className="cert-header">
+                  <div className="cert-icon">
+                    <Award size={24} />
+                  </div>
+                  <div className="cert-title-group">
+                    <h3>{cert.title}</h3>
+                    <p className="cert-issuer">{cert.issuer}</p>
+                  </div>
+                  {cert.link && (
+                    <a href={cert.link} target="_blank" rel="noreferrer" className="cert-link" aria-label={t.certifications.viewCertificate}>
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
+                </div>
+                {cert.images && cert.images.length > 0 && (
+                  <div className="cert-images-scroll">
+                    {cert.images.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`${cert.title} - Certificat ${index + 1}`}
+                        role="button"
+                        tabIndex="0"
+                        onClick={() => {
+                          setLightboxProject({ ...cert, tech: cert.skills });
+                          setLightboxIndex(index);
+                        }}
+                        onKeyDown={(event) => {
+                          if (event.key === "Enter" || event.key === " ") {
+                            setLightboxProject({ ...cert, tech: cert.skills });
+                            setLightboxIndex(index);
+                          }
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
+                <div className="tech-stack">
+                  {cert.skills.map((skill) => (
+                    <span className="tech-chip" key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
         <SectionHeader

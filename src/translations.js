@@ -159,14 +159,14 @@ export const translations = {
             "Formation approfondie en architecture logicielle, bases de données, réseaux et systèmes d'information. Acquisition de compétences en développement web, intelligence artificielle et ingénierie logicielle.",
         },
         pfa: {
-          date: "Juillet - Septembre 2026",
+          date: "Juillet – Août 2026",
           title: "Projet de Fin d'Année (PFA) - Développeur Full-Stack (Mentora RH)",
           place: "HB Développement - Tétouan",
           description:
             "Conception et développement d'une solution SIRH (Mentora RH) en architecture Full-Stack. Mise en place d'une authentification JWT hybride, d'un système de pointage BYOD, de la gestion des congés (Ledger), et génération automatisée de documents RH (PDF, Mattermost, n8n).",
         },
         work: {
-          date: "Juin - Août 2025",
+          date: "Juillet – Août 2026",
           title: "Stage en Développement Web Full-Stack",
           place: "NAJA7HOST - Tétouan",
           description:
@@ -410,14 +410,14 @@ export const translations = {
           tech: ["Software Architecture", "Databases", "Networks", "AI"],
         },
         pfa: {
-          date: "July - September 2026",
+          date: "July – August 2026",
           title: "End-of-Year Project (PFA) - Full-Stack Developer (Mentora HR)",
           place: "HB Développement - Tétouan",
           description:
             "Designed and developed the Mentora HRIS solution using a Full-Stack architecture. Implemented a hybrid JWT authentication, an innovative BYOD attendance system, a Ledger-based leave management system, and automated HR document generation (PDF, Mattermost, n8n).",
         },
         work: {
-          date: "June - August 2025",
+          date: "July – August 2026",
           title: "Full-Stack Web Development Internship",
           place: "NAJA7HOST - Tétouan",
           description:

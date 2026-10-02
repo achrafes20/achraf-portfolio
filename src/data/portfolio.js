@@ -363,7 +363,7 @@ export const timeline = [
   },
   {
     type: "pfa",
-    date: "Juillet - Septembre 2026",
+    date: "Juillet – Août 2026",
     title: "Stage PFA - Développeur Full-Stack (Mentora RH)",
     place: "HB Développement - Tétouan",
     description:
@@ -373,7 +373,7 @@ export const timeline = [
   },
   {
     type: "work",
-    date: "Juin - Août 2025",
+    date: "Juillet – Août 2026",
     title: "Stage en Développement Web Full-Stack",
     place: "NAJA7HOST - Tétouan",
     description:

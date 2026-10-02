@@ -131,9 +131,10 @@ function App() {
   const notify = (message, type = "info") => setToast({ message, type });
 
   const downloadCV = () => {
+    const isEn = lang === "en";
     const link = document.createElement("a");
-    link.href = CONFIG.cvUrl;
-    link.download = "ES-SERRAR-ACHRAF-CV.pdf";
+    link.href = isEn ? "/ES-SERRAR-ACHRAF-CV-ENG.pdf" : "/ES-SERRAR-ACHRAF-CV.pdf";
+    link.download = isEn ? "ES-SERRAR-ACHRAF-CV-ENG.pdf" : "ES-SERRAR-ACHRAF-CV.pdf";
     document.body.appendChild(link);
     link.click();
     link.remove();

@@ -96,7 +96,7 @@ function App() {
     return translatedProjects.filter((project) => project.category === activeFilter);
   }, [activeFilter, translatedProjects]);
 
-  const heroStats = [`${projects.length}+`, `${TECHNOLOGIES_COUNT}+`, "2+"].map((value, index) => ({
+  const heroStats = [`${projects.length}+`, `${TECHNOLOGIES_COUNT}+`, "2"].map((value, index) => ({
     value,
     label: t.hero.stats[index],
   }));
@@ -752,21 +752,15 @@ function ProjectCard({ project, activeIndex, setProjectSlide, goToSlide, onOpenL
             }}
           />
         ) : (
-          <div
-            className="project-image-placeholder"
-            role="button"
-            tabIndex="0"
-            onClick={onOpenLightbox}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") onOpenLightbox();
-            }}
-          >
+          <div className="project-image-placeholder">
             {project.title}
           </div>
         )}
-        <span className="project-zoom-icon" aria-hidden="true">
-          <ZoomIn size={18} />
-        </span>
+        {activeImage && (
+          <span className="project-zoom-icon" aria-hidden="true">
+            <ZoomIn size={18} />
+          </span>
+        )}
         <span className="project-badge">{project.badge}</span>
         {hasMultipleImages && (
           <>

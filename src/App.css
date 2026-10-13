@@ -1016,8 +1016,31 @@ img {
   font-size: 1.08rem;
 }
 
+@media (min-width: 761px) {
+  .project-body h3 {
+    min-height: 2.4em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .project-body > p {
+    height: 6.6em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+}
+
 .project-body .tech-stack {
   margin-top: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-body > .btn.compact {
+  margin-top: auto;
 }
 
 .tech-stack {

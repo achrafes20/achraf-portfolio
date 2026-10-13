@@ -11,23 +11,23 @@ export const translations = {
     },
     hero: {
       greeting: "Bonjour, je suis",
-      subtitle: "Étudiant Ingénieur en Génie Informatique",
+      subtitle: "Élève ingénieur Full-Stack & DevOps",
       description:
-        "Passionné par le développement full-stack et l'architecture des systèmes. Je transforme des idées en solutions numériques.",
+        "Spécialisé en développement Full-Stack, architectures microservices, déploiement conteneurisé et observabilité.",
       projectsButton: "Voir mes projets",
       cvButton: "Télécharger mon CV",
       statsLabel: "Statistiques",
-      stats: ["Projets réalisés", "Technologies", "Ans d'expérience"],
+      stats: ["Projets réalisés", "Technologies", "Expériences en entreprise"],
     },
     about: {
       title: "À propos de moi",
       subtitle:
-        "Ingénieur en informatique passionné par le développement de solutions innovantes et l'optimisation des systèmes.",
+        "Élève ingénieur en Génie Informatique spécialisé en développement Full-Stack, DevOps et architectures microservices.",
       sectionLabel: "Présentation",
       bio: [
-        "Étudiant en 5ème année de Génie Informatique à l'ENSA de Tétouan, je me spécialise dans le développement logiciel et l'architecture des systèmes.",
-        "Mon parcours m'a permis d'acquérir une expertise solide dans les technologies modernes du web, les bases de données et les méthodologies DevOps.",
-        "Je suis particulièrement intéressé par l'intelligence artificielle, les systèmes distribués et les bonnes pratiques d'ingénierie logicielle.",
+        "Étudiant en 5ᵉ année de Génie Informatique à l’ENSA de Tétouan, je conçois des applications web modernes, des architectures microservices sécurisées et des solutions cloud-native.",
+        "Mes expériences chez HB Développement et NAJA7HOST m’ont permis de travailler sur Spring Boot, React, Laravel, Docker, Kubernetes, GitOps et l’observabilité avec Prometheus, Grafana et Loki.",
+        "Je m’intéresse particulièrement aux systèmes distribués, à l’intelligence artificielle, à l’ingénierie DevOps et aux technologies SAP. Je recherche un PFE de six mois à partir de janvier 2027.",
       ],
       skillTitles: {
         development: "Développement",
@@ -132,6 +132,11 @@ export const translations = {
           title: "AgileFlow - Gestion de Projets Agiles",
           description:
             "Plateforme full-stack de gestion de projets agiles inspirée de Jira, avec planning, Kanban, diagrammes collaboratifs, chronologie Gantt, rôles, chat temps réel et intégration GitHub.",
+        },
+        sgitu: {
+          title: "SGITU - Sécurisation d’une Architecture Microservices",
+          description:
+            "Backend microservices sécurisé avec authentification JWT, gestion des utilisateurs et des rôles, API Gateway centralisant le routage vers neuf microservices, communication événementielle Kafka, cache Redis et supervision Prometheus/Grafana.",
         },
         giftplan: {
           title: "GiftPlan - Cadeaux Collaboratifs",
@@ -259,23 +264,23 @@ export const translations = {
     },
     hero: {
       greeting: "Hello, I am",
-      subtitle: "Software Engineering Student at ENSA Tétouan",
+      subtitle: "Full-Stack & DevOps Engineering Student",
       description:
-        "Passionate about full-stack development and systems architecture. I turn ideas into digital solutions.",
+        "Specialized in full-stack development, microservices architectures, containerized deployment, and observability.",
       projectsButton: "View my projects",
       cvButton: "Download my CV",
       statsLabel: "Statistics",
-      stats: ["Projects completed", "Technologies", "Years of experience"],
+      stats: ["Projects completed", "Technologies", "Industry experiences"],
     },
     about: {
       title: "About me",
       subtitle:
-        "Software engineer passionate about building innovative solutions and optimizing systems.",
+        "Computer Engineering student specializing in full-stack development, DevOps, and microservices architectures.",
       sectionLabel: "About",
       bio: [
-        "I am a fifth-year Computer Engineering student at ENSA Tétouan, specializing in software development and systems architecture.",
-        "My journey has given me solid expertise in modern web technologies, databases, and DevOps methodologies.",
-        "I am particularly interested in artificial intelligence, distributed systems, and software engineering best practices.",
+        "As a fifth-year Computer Engineering student at ENSA Tétouan, I build modern web applications, secure microservices architectures, and cloud-native solutions.",
+        "My experiences at HB Développement and NAJA7HOST allowed me to work with Spring Boot, React, Laravel, Docker, Kubernetes, GitOps, and observability using Prometheus, Grafana, and Loki.",
+        "I am particularly interested in distributed systems, artificial intelligence, DevOps engineering, and SAP technologies. I am seeking a six-month final-year internship starting in January 2027.",
       ],
       skillTitles: {
         development: "Development",
@@ -382,6 +387,11 @@ export const translations = {
           title: "AgileFlow - Agile Project Management",
           description:
             "Jira-inspired full-stack agile project management platform featuring planning, Kanban, collaborative diagrams, a Gantt timeline, project roles, real-time chat, and GitHub integration.",
+        },
+        sgitu: {
+          title: "SGITU - Securing a Microservices Architecture",
+          description:
+            "Secure microservices backend featuring JWT authentication, user and role management, an API Gateway centralizing routing to nine microservices, Kafka event-driven communication, Redis caching, and Prometheus/Grafana monitoring.",
         },
         giftplan: {
           title: "GiftPlan - Collaborative Group Gifts",

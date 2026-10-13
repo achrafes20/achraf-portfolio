@@ -10,7 +10,7 @@ export const CONFIG = {
 
 export const profile = {
   name: "Achraf Es-serrar",
-  role: "Étudiant Ingénieur en Génie Informatique",
+  role: "Élève ingénieur Full-Stack & DevOps",
   location: "Tétouan, Maroc",
   email: "esserrar.achraf@gmail.com",
   phone: "+212 620 830 449",
@@ -20,13 +20,13 @@ export const profile = {
   linkedin: "https://linkedin.com/in/achraf-es-serrar-300bb2279",
   linkedinHandle: "/in/achraf-es-serrar",
   tagline:
-    "Passionné par le développement de solutions innovantes et l'optimisation des systèmes. Je combine créativité et expertise technique pour transformer des idées en réalité numérique.",
+    "Spécialisé en développement Full-Stack, architectures microservices, déploiement conteneurisé et observabilité.",
   aboutIntro:
-    "Ingénieur en informatique passionné par le développement de solutions innovantes et l'optimisation des systèmes.",
+    "Élève ingénieur en Génie Informatique spécialisé en développement Full-Stack, DevOps et architectures microservices.",
   about: [
-    "Étudiant en 4ème année de Génie Informatique à l'ENSA de Tétouan, je me spécialise dans le développement logiciel et l'architecture des systèmes.",
-    "Mon parcours m'a permis d'acquérir une expertise solide dans les technologies modernes du web, les bases de données et les méthodologies DevOps.",
-    "Je suis particulièrement intéressé par l'intelligence artificielle, les systèmes distribués et les bonnes pratiques d'ingénierie logicielle.",
+    "Étudiant en 5ᵉ année de Génie Informatique à l’ENSA de Tétouan, je conçois des applications web modernes, des architectures microservices sécurisées et des solutions cloud-native.",
+    "Mes expériences chez HB Développement et NAJA7HOST m’ont permis de travailler sur le développement Full-Stack, le DevOps et l’observabilité.",
+    "Je recherche un PFE de six mois à partir de janvier 2027.",
   ],
   footer:
     "Ingénieur en Génie Informatique passionné par l'innovation technologique et le développement de solutions digitales performantes.",
@@ -42,9 +42,9 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: "12+", label: "Projets réalisés" },
-  { value: "8+", label: "Technologies maîtrisées" },
-  { value: "2+", label: "Années d'expérience" },
+  { value: "17+", label: "Projets réalisés" },
+  { value: "22+", label: "Technologies maîtrisées" },
+  { value: "2", label: "Expériences en entreprise" },
 ];
 
 export const skills = [
@@ -66,7 +66,7 @@ export const skills = [
   {
     key: "infrastructure",
     title: "Infrastructure",
-    description: "Docker, Git, Linux, AWS, CI/CD",
+    description: "Docker, Kubernetes, Argo CD, GitHub Actions, Prometheus, Grafana",
   },
   {
     key: "mobile",
@@ -130,6 +130,30 @@ export const projects = [
       "/images/AgileFlow/img 8.png",
       "/images/AgileFlow/img 9.png",
 
+    ],
+  },
+  {
+    id: "sgitu",
+    title: "SGITU - Sécurisation d’une Architecture Microservices",
+    category: "web",
+    badge: "Spring Security",
+    description:
+      "Backend microservices sécurisé avec authentification JWT, gestion des utilisateurs et des rôles, API Gateway centralisant le routage vers neuf microservices, communication événementielle Kafka, cache Redis et supervision Prometheus/Grafana.",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "Gateway",
+      "Kafka",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+    ],
+    repo: "https://github.com/Houssam265/SGITU-Microservices.git",
+    images: [
+      "/images/sgitu/grafana_global_dashboard.png",
+      "/images/sgitu/prometheus_targets_all_up.png",
+      "/images/sgitu/prometheus_targets_all_up2.png",
     ],
   },
   {

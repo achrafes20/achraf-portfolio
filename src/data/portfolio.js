@@ -422,7 +422,15 @@ export const certifications = [
     title: "IBM Applied DevOps Engineering",
     issuer: "IBM / Coursera",
     link: "https://coursera.org/share/c24ebd77981cf8828665d32987f161b0",
-    skills: ["Docker", "Kubernetes", "OpenShift", "CI/CD", "Microservices", "Agile", "Scrum", "TDD", "Security", "Observability"],
+    skills: [
+      "OpenShift",
+      "CI/CD",
+      "Infrastructure as Code (IaC)",
+      "OWASP",
+      "Test Driven Development (TDD)",
+      "Agile Software Development",
+      "Grafana"
+    ],
     images: [
       "/images/certifications/ibm-devops-global.png",
       "/images/certifications/ibm-devops-1.png",
@@ -438,12 +446,38 @@ export const certifications = [
   },
   {
     id: "machine-learning",
-    title: "Machine\nLearning",
+    title: "Exploratory Data Analysis for Machine Learning",
     issuer: "IBM / Coursera",
     link: "https://coursera.org/share/92e680d8213d94b61e0f64a14b956acd",
-    skills: ["Machine Learning", "Python", "Data Science", "AI Models"],
+    skills: [
+      "Exploratory Data Analysis",
+      "Feature Engineering",
+      "Data Cleansing",
+      "Statistical Hypothesis Testing",
+      "Statistical Inference",
+      "Machine Learning",
+      "Data Science"
+    ],
     images: [
       "/images/certifications/ml-certificate.png"
+    ]
+  },
+  {
+    id: "sap-professional-fundamentals",
+    title: "SAP Professional Fundamentals",
+    issuer: "SAP / Coursera",
+    link: "https://www.coursera.org/learn/sap-professional-fundamentals/home/welcome",
+    skills: [
+      "SAP Ecosystem",
+      "Business Transformation",
+      "Technical Consulting",
+      "Project Management",
+      "Agile",
+      "Design Thinking",
+      "Systems Thinking"
+    ],
+    images: [
+      "/images/certifications/sap.png"
     ]
   }
 ];

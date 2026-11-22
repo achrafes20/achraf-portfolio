@@ -1,17 +1,9 @@
-export const CONFIG = {
-  cvUrl: "/ES-SERRAR-ACHRAF-CV.pdf",
-  supabase: {
-    url: "https://rsvwqhimmjzzpwyivllj.supabase.co",
-    anonKey: "sb_publishable_LVwnRIngVC1kxFsAkuHmAQ__-M9Dc89",
-    table: "contact_messages",
-    contactEmailFunction: "send-contact-email",
-  },
-};
+// Données structurelles du portfolio (liens, technologies, images, catégories).
+// Tous les textes affichés (titres, descriptions, dates, rôles) sont dans
+// src/translations.js, indexés par le même identifiant : une seule source par texte.
 
 export const profile = {
   name: "Achraf Es-serrar",
-  role: "Élève ingénieur Full-Stack & DevOps",
-  location: "Tétouan, Maroc",
   email: "esserrar.achraf@gmail.com",
   phone: "+212 620 830 449",
   phoneRaw: "+212620830449",
@@ -19,402 +11,199 @@ export const profile = {
   githubHandle: "/achrafes20",
   linkedin: "https://linkedin.com/in/achraf-es-serrar-300bb2279",
   linkedinHandle: "/in/achraf-es-serrar",
-  tagline:
-    "Spécialisé en développement Full-Stack, architectures microservices, déploiement conteneurisé et observabilité.",
-  aboutIntro:
-    "Élève ingénieur en Génie Informatique spécialisé en développement Full-Stack, DevOps et architectures microservices.",
-  about: [
-    "Étudiant en 5ᵉ année de Génie Informatique à l’ENSA de Tétouan, je conçois des applications web modernes, des architectures microservices sécurisées et des solutions cloud-native.",
-    "Mes expériences chez HB Développement et NAJA7HOST m’ont permis de travailler sur le développement Full-Stack, le DevOps et l’observabilité.",
-    "Je recherche un PFE de six mois à partir de janvier 2027.",
-  ],
-  footer:
-    "Ingénieur en Génie Informatique passionné par l'innovation technologique et le développement de solutions digitales performantes.",
 };
 
-export const navLinks = [
-  { label: "Accueil", href: "#home" },
-  { label: "À propos", href: "#about" },
-  { label: "Projets", href: "#projects" },
-  { label: "Expérience", href: "#experience" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Contact", href: "#contact" },
-];
+export const sectionIds = ["home", "about", "projects", "experience", "certifications", "contact"];
 
-export const stats = [
-  { value: "17+", label: "Projets réalisés" },
-  { value: "22+", label: "Technologies maîtrisées" },
-  { value: "2", label: "Expériences en entreprise" },
-];
-
+// Les technologies sont des noms propres : identiques en français et en anglais.
 export const skills = [
-  {
-    key: "development",
-    title: "Développement",
-    description: "Java, Python, C, JavaScript, TypeScript",
-  },
-  {
-    key: "web",
-    title: "Technologies Web",
-    description: "React, Angular, Node.js, Laravel, ASP.NET",
-  },
-  {
-    key: "database",
-    title: "Bases de données",
-    description: "MySQL, MongoDB, PostgreSQL, SQL Server",
-  },
-  {
-    key: "infrastructure",
-    title: "Infrastructure",
-    description: "Docker, Kubernetes, Argo CD, GitHub Actions, Prometheus, Grafana",
-  },
-  {
-    key: "mobile",
-    title: "Développement Mobile",
-    description: "Flutter, Dart, Riverpod, Supabase",
-  },
-  {
-    key: "ai",
-    title: "IA & Data",
-    description: "Python, XGBoost, FastAPI, Streamlit, Scikit-learn",
-  },
-  {
-    key: "systems",
-    title: "Backend & Systèmes",
-    description: "Spring Boot, JavaFX, WebSocket, TCP/TLS, UDP, JDBC",
-  },
+  { key: "development", items: "Java, Python, TypeScript, JavaScript, C, C#, PHP, Dart" },
+  { key: "web", items: "React, Angular, Node.js, Laravel, ASP.NET, Tailwind CSS" },
+  { key: "systems", items: "Spring Boot, Spring Security, RabbitMQ, Kafka, WebSocket, TCP/TLS" },
+  { key: "infrastructure", items: "Docker, Kubernetes, Argo CD, GitHub Actions, Prometheus, Grafana, Loki" },
+  { key: "database", items: "PostgreSQL, MySQL, MongoDB, SQL Server, Oracle, Supabase" },
+  { key: "ai", items: "Python, XGBoost, scikit-learn, pandas, FastAPI, Streamlit" },
+  { key: "mobile", items: "Flutter, Dart, Riverpod, Supabase" },
 ];
 
-export const filters = [
-  { id: "all", label: "Tous les projets" },
-  { id: "web", label: "Web" },
-  { id: "desktop", label: "Desktop" },
-  { id: "game", label: "Jeux" },
-  { id: "ml", label: "IA / ML" },
-  { id: "mobile", label: "Mobile" },
-];
+export const filters = ["all", "web", "desktop", "game", "ml", "mobile"];
 
 export const projects = [
   {
     id: "nutrition-risk-classifier",
-    title: "Nutrition Risk Classifier",
     category: "ml",
     badge: "XGBoost",
-    description:
-      "Solution complète de Machine Learning pour détecter les produits alimentaires à haut risque nutritionnel à partir des données Open Food Facts, avec API FastAPI, interface Streamlit et déploiement Docker.",
-    tech: ["Python", "XGBoost", "FastAPI", "Streamlit", "Docker"],
+    tech: ["Python", "XGBoost", "scikit-learn", "FastAPI", "Streamlit", "Docker"],
     repo: "https://hub.docker.com/r/achrafes20/nutrition-risk-classifier",
     linkType: "docker",
     images: [
-      "/images/Nutrition Risk Classifier/img 1.png",
-      "/images/Nutrition Risk Classifier/img 2.png",
+      "/images/nutrition-risk-classifier/img-1.webp",
+      "/images/nutrition-risk-classifier/img-2.webp",
     ],
   },
   {
     id: "agileflow",
-    title: "AgileFlow - Gestion de Projets Agiles",
     category: "web",
     badge: "Spring Boot",
-    description:
-      "Plateforme full-stack de gestion de projets agiles inspirée de Jira, avec planning, Kanban, diagrammes collaboratifs, chronologie Gantt, rôles, chat temps réel et intégration GitHub.",
-    tech: ["Spring Boot", "React", "TypeScript", "MySQL", "WebSocket"],
-    repo: "https://github.com/Houssam265/AgileFlow.git",
-    images: [
-      "/images/AgileFlow/img 1.png",
-      "/images/AgileFlow/img 2.png",
-      "/images/AgileFlow/img 3.png",
-      "/images/AgileFlow/img 4.png",
-      "/images/AgileFlow/img 5.png",
-      "/images/AgileFlow/img 6.png",
-      "/images/AgileFlow/img 7.png",
-      "/images/AgileFlow/img 8.png",
-      "/images/AgileFlow/img 9.png",
-
-    ],
+    tech: ["Spring Boot", "React", "TypeScript", "MySQL", "WebSocket", "Material UI"],
+    repo: "https://github.com/Houssam265/AgileFlow",
+    images: Array.from({ length: 9 }, (_, index) => `/images/agileflow/img-${index + 1}.webp`),
   },
   {
     id: "sgitu",
-    title: "SGITU - Sécurisation d’une Architecture Microservices",
     category: "web",
     badge: "Spring Security",
-    description:
-      "Backend microservices sécurisé avec authentification JWT, gestion des utilisateurs et des rôles, API Gateway centralisant le routage vers neuf microservices, communication événementielle Kafka, cache Redis et supervision Prometheus/Grafana.",
-    tech: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "Gateway",
-      "Kafka",
-      "Redis",
-      "Docker",
-      "Kubernetes",
-    ],
-    repo: "https://github.com/Houssam265/SGITU-Microservices.git",
+    tech: ["Java", "Spring Boot", "Spring Security", "Gateway", "Kafka", "Redis", "Docker", "Kubernetes"],
+    repo: "https://github.com/Houssam265/SGITU-Microservices",
     images: [
-      "/images/sgitu/grafana_global_dashboard.png",
-      "/images/sgitu/prometheus_targets_all_up.png",
-      "/images/sgitu/prometheus_targets_all_up2.png",
+      "/images/sgitu/grafana-global-dashboard.webp",
+      "/images/sgitu/prometheus-targets-all-up.webp",
+      "/images/sgitu/prometheus-targets-all-up2.webp",
     ],
   },
   {
     id: "giftplan",
-    title: "GiftPlan - Cadeaux Collaboratifs",
     category: "mobile",
     badge: "Flutter",
-    description:
-      "Application mobile collaborative pour organiser des cadeaux de groupe, créer des listes partagées et suivre en temps réel les contributions vers les objectifs de financement.",
     tech: ["Flutter", "Dart", "Riverpod", "Supabase", "PostgreSQL"],
     repo: "https://github.com/Houssam265/application-mobile-GIFT-PLANNING-",
     images: [
-      "/images/GiftPlan/image 3.png",
-      "/images/GiftPlan/image 1.png",
-      "/images/GiftPlan/image 2.png",
+      "/images/giftplan/image-3.webp",
+      "/images/giftplan/image-1.webp",
+      "/images/giftplan/image-2.webp",
     ],
   },
   {
     id: "chrionline",
-    title: "ChriOnline - Application E-commerce Desktop",
     category: "desktop",
     badge: "JavaFX",
-    description:
-      "Application e-commerce JavaFX en architecture client-serveur, avec échanges JSON sur TCP/TLS, notifications UDP, paiement simulé sécurisé et administration des produits, commandes et utilisateurs.",
     tech: ["Java", "JavaFX", "TCP/TLS", "UDP", "MySQL"],
     repo: "https://github.com/Houssam265/Application-JAVA-E-Commerce-ChriOnline-",
     images: [
-      "/images/ChriOnline/img 1.png",
-      "/images/ChriOnline/img 2.png",
-      "/images/ChriOnline/img 3.png",
+      "/images/chrionline/img-1.webp",
+      "/images/chrionline/img-2.webp",
+      "/images/chrionline/img-3.webp",
     ],
   },
   {
     id: "ecommerce",
-    title: "Plateforme E-commerce Coopérative Marocaine",
     category: "web",
     badge: "ASP.NET",
-    description:
-      "Application web ASP.NET complète pour une coopérative marocaine avec gestion produits, commandes, clients, panier et dashboard administrateur.",
     tech: ["ASP.NET", "C#", "SQL Server", "Entity Framework"],
-    repo: "https://github.com/Houssam265/Application-E-commerce--DotNet-.git",
-    images: [
-      "/images/ecommerce/img1.png",
-      "/images/ecommerce/img2.png",
-      "/images/ecommerce/img3.png",
-    ],
+    repo: "https://github.com/Houssam265/Application-E-commerce--DotNet-",
+    images: ["/images/ecommerce/img1.webp", "/images/ecommerce/img2.webp", "/images/ecommerce/img3.webp"],
   },
   {
     id: "espace-etudiant",
-    title: "Espace Étudiant - Gestion des Services",
     category: "web",
     badge: "Node.js",
-    description:
-      "Plateforme web pour centraliser les demandes administratives des étudiants avec traitement automatisé côté administration.",
     tech: ["Node.js", "React", "MySQL", "JWT"],
-    repo: "https://github.com/achrafes20/projet-espace-etudiant.git",
-    images: [
-      "/images/espace_etudiant/img1.png",
-      "/images/espace_etudiant/img2.png",
-      "/images/espace_etudiant/img3.png",
-      "/images/espace_etudiant/img4.png",
-      "/images/espace_etudiant/img5.png",
-      "/images/espace_etudiant/img6.png",
-      "/images/espace_etudiant/img7.png",
-      "/images/espace_etudiant/img8.png",
-    ],
+    repo: "https://github.com/achrafes20/projet-espace-etudiant",
+    images: Array.from({ length: 8 }, (_, index) => `/images/espace-etudiant/img${index + 1}.webp`),
   },
   {
     id: "servicepro",
-    title: "ServicePro App",
     category: "web",
     badge: "Laravel",
-    description:
-      "Application Laravel pour la gestion des services de plomberie et maintenance de piscines. Plateforme complète de mise en relation clients/prestataires.",
     tech: ["Laravel", "PHP", "MySQL", "Composer"],
     repo: "https://github.com/achrafes20/ServicePro-app",
-    images: [
-      "/images/servicepro/img1.png",
-      "/images/servicepro/img2.png",
-      "/images/servicepro/img3.png",
-      "/images/servicepro/img4.png",
-      "/images/servicepro/img5.png",
-    ],
+    images: Array.from({ length: 5 }, (_, index) => `/images/servicepro/img${index + 1}.webp`),
   },
   {
     id: "foot",
-    title: "Système de Réservation Terrains de Foot",
     category: "web",
     badge: "PHP",
-    description:
-      "Application web pour la gestion des réservations de terrains avec vérification de disponibilité en temps réel et génération automatique de factures.",
     tech: ["PHP", "MySQL", "JavaScript", "AJAX"],
     repo: "https://github.com/AmineElBiyadi/MiniProject_2",
-    images: [
-      "/images/foot/img1.png",
-      "/images/foot/img2.png",
-      "/images/foot/img3.png",
-      "/images/foot/img4.png",
-    ],
+    images: Array.from({ length: 4 }, (_, index) => `/images/foot/img${index + 1}.webp`),
   },
   {
     id: "campus-events",
-    title: "Campus Events Management System",
     category: "web",
     badge: "PHP",
-    description:
-      "Application PHP/MySQL pour la gestion des événements étudiants avec système de rôles, vérification email et attestations PDF automatisées.",
     tech: ["PHP", "MySQL", "JavaScript", "Dompdf"],
-    repo: "https://github.com/Taha7486/Mini-Projet.git",
-    images: [
-      "/images/event/img1.png",
-      "/images/event/img2.png",
-      "/images/event/img3.png",
-      "/images/event/img4.png",
-    ],
+    repo: "https://github.com/Taha7486/Mini-Projet",
+    images: Array.from({ length: 4 }, (_, index) => `/images/event/img${index + 1}.webp`),
   },
   {
     id: "pharmacie",
-    title: "Gestion Pharmacie - Application Windows Forms",
     category: "desktop",
     badge: ".NET",
-    description:
-      "Application complète de gestion de pharmacie avec .NET Windows Forms et SQL Server. Alertes de péremption et impressions de documents.",
     tech: ["C#", ".NET", "Windows Forms", "SQL Server"],
     repo: "https://github.com/achrafes20/Gestion-Pharmacie",
-    images: [
-      "/images/gestion_pharmacie/img1.png",
-      "/images/gestion_pharmacie/img2.png",
-      "/images/gestion_pharmacie/img3.png",
-      "/images/gestion_pharmacie/img4.png",
-      "/images/gestion_pharmacie/img5.png",
-      "/images/gestion_pharmacie/img6.png",
-      "/images/gestion_pharmacie/img7.png",
-    ],
+    images: Array.from({ length: 7 }, (_, index) => `/images/gestion-pharmacie/img${index + 1}.webp`),
   },
   {
     id: "gaming-store",
-    title: "Gaming Store",
     category: "web",
     badge: "Laravel",
-    description:
-      "Boutique en ligne moderne pour jeux vidéo développée avec Laravel. Interface dynamique avec gestion des comptes administrateurs et utilisateurs.",
     tech: ["Laravel", "PHP", "MySQL", "Composer"],
     repo: "https://github.com/achrafes20/Gaming_store",
-    images: [
-      "/images/gaming_store/img1.png",
-      "/images/gaming_store/img2.png",
-      "/images/gaming_store/img3.png",
-      "/images/gaming_store/img4.png",
-    ],
+    images: Array.from({ length: 4 }, (_, index) => `/images/gaming-store/img${index + 1}.webp`),
   },
   {
     id: "space-defender",
-    title: "Space Defender Game",
     category: "game",
     badge: "Java",
-    description:
-      "Jeu de tir spatial en Java avec versions mono-joueur et multijoueur. Contrôle du vaisseau, animations et communication réseau via sockets TCP.",
     tech: ["Java", "JavaFX", "Sockets TCP", "JDBC"],
     repo: "https://github.com/achrafes20/Space_Defender_Game",
     images: [
-      "/images/space_defender_game/game_icon.png",
-      "/images/space_defender_game/img1.png",
-      "/images/space_defender_game/img2.png",
-      "/images/space_defender_game/img3.png",
+      "/images/space-defender-game/game-icon.webp",
+      "/images/space-defender-game/img1.webp",
+      "/images/space-defender-game/img2.webp",
+      "/images/space-defender-game/img3.webp",
     ],
   },
   {
     id: "salle-sport",
-    title: "Système de Gestion de Salle de Sport",
     category: "web",
     badge: "Docker",
-    description:
-      "Application microservices avec conteneurisation Docker pour la gestion complète d'une salle de sport (membres, planning, paiements).",
     tech: ["Docker", "Laravel", "Angular", "MySQL"],
-    repo: "https://github.com/achrafes20/projet-web.git",
-    images: ["/images/fitness/img1.png", "/images/fitness/img2.png"],
+    repo: "https://github.com/achrafes20/projet-web",
+    images: ["/images/fitness/img1.webp", "/images/fitness/img2.webp"],
   },
   {
     id: "can-2025",
-    title: "Site Web CAN 2025 - Portail Officiel",
     category: "web",
     badge: "HTML/CSS",
-    description:
-      "Portail web complet et réactif présentant la Coupe d'Afrique des Nations 2025 au Maroc. Développé en équipe de 5 avec HTML, CSS et JavaScript.",
     tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     repo: "https://github.com/achrafes20/Developpement_web",
-    images: [
-      "/images/can/img1.png",
-      "/images/can/img2.png",
-      "/images/can/img3.png",
-      "/images/can/img4.png",
-      "/images/can/img5.png",
-      "/images/can/img6.png",
-      "/images/can/img7.png",
-    ],
+    images: Array.from({ length: 7 }, (_, index) => `/images/can/img${index + 1}.webp`),
   },
   {
     id: "automate",
-    title: "Projet Automate",
     category: "desktop",
     badge: "C",
-    description:
-      "Implémentation en C d'automates finis (AFD/AFN) avec opérations avancées : union, concaténation, étoile de Kleene, déterminisation et minimisation.",
-    tech: ["C", "Algorithms", "Théorie Langages"],
     repo: "https://github.com/achrafes20/Projet-Automate",
-    images: ["/images/automate/img1.png", "/images/automate/img2.png"],
+    images: ["/images/automate/img1.webp", "/images/automate/img2.webp"],
   },
   {
     id: "gestion-etudiants",
-    title: "Système de Gestion des Étudiants",
     category: "desktop",
     badge: "C",
-    description:
-      "Application complète en C pour gérer une base de données d'étudiants avec recherche, modification, tri, calcul de moyennes et génération de rapports.",
-    tech: ["C", "Structures", "Fichiers", "QuickSort"],
     repo: "https://github.com/achrafes20/Gestionnaire-Etudiants",
-    images: ["/images/etudiants_c/img1.png"],
+    images: ["/images/etudiants-c/img1.webp"],
   },
 ];
 
+// Ordre antichronologique. Les textes sont dans translations.js -> experience.items[type].
 export const timeline = [
-  {
-    type: "formation",
-    date: "2022 - Présent",
-    title: "Diplôme d'ingénieur d'État en Génie Informatique",
-    place: "École Nationale des Sciences Appliquées, Tétouan",
-    description:
-      "Formation approfondie en architecture logicielle, bases de données, réseaux et systèmes d'information. Acquisition de compétences en développement web, intelligence artificielle et ingénierie logicielle.",
-    tech: ["Architecture Logicielle", "Bases de Données", "Réseaux", "IA"],
-  },
+  { type: "formation", icon: "graduation" },
   {
     type: "pfa",
-    date: "Juillet – Août 2026",
-    title: "Stage PFA - Développeur Full-Stack (Mentora RH)",
-    place: "HB Développement - Tétouan",
-    description:
-      "Conception et développement d'une solution SIRH (Mentora RH) avec une architecture Full-Stack. Mise en place d'une authentification JWT hybride, d'un système de pointage BYOD, de la gestion des congés via le pattern Ledger, et génération automatisée de documents RH.",
-    techLabel: "Environnement technique :",
-    tech: ["Spring Boot", "React", "PostgreSQL", "JWT", "Tailwind CSS"],
+    icon: "briefcase",
+    tech: ["Spring Boot", "Spring Security", "React", "TypeScript", "PostgreSQL", "Tailwind CSS", "n8n"],
   },
   {
     type: "work",
-    date: "Juillet – Août 2026",
-    title: "Stage en Développement Web Full-Stack",
-    place: "NAJA7HOST - Tétouan",
-    description:
-      "Conception et développement d'une application web d'e-commerce complète avec gestion des produits, commandes, panier et utilisateurs. Interface d'administration moderne et responsive.",
-    techLabel: "Environnement technique :",
-    tech: ["Laravel", "Tailwind CSS", "JavaScript", "MySQL"],
+    icon: "briefcase",
+    tech: ["Laravel 12", "RabbitMQ", "Docker", "Kubernetes", "Argo CD", "Prometheus", "Grafana", "Loki", "Gemini API"],
   },
-  {
-    type: "school",
-    date: "2021 - 2022",
-    title: "Baccalauréat en Sciences Physiques et Chimiques",
-    place: "Lycée Mohamed El-Mekki Naciri, Tétouan",
-    description:
-      "Option française. Mention Très Bien. Formation scientifique approfondie préparant aux études d'ingénierie.",
-    tech: [],
-  },
+  { type: "school", icon: "school" },
 ];
+
+// Nombre d'expériences en entreprise, calculé à partir de la chronologie.
+export const PROFESSIONAL_EXPERIENCES = timeline.filter((item) => item.icon === "briefcase").length;
 
 export const certifications = [
   {
@@ -429,20 +218,12 @@ export const certifications = [
       "OWASP",
       "Test Driven Development (TDD)",
       "Agile Software Development",
-      "Grafana"
+      "Grafana",
     ],
     images: [
-      "/images/certifications/ibm-devops-global.png",
-      "/images/certifications/ibm-devops-1.png",
-      "/images/certifications/ibm-devops-2.png",
-      "/images/certifications/ibm-devops-3.png",
-      "/images/certifications/ibm-devops-4.png",
-      "/images/certifications/ibm-devops-5.png",
-      "/images/certifications/ibm-devops-6.png",
-      "/images/certifications/ibm-devops-7.png",
-      "/images/certifications/ibm-devops-8.png",
-      "/images/certifications/ibm-devops-9.png"
-    ]
+      "/images/certifications/ibm-devops-global.webp",
+      ...Array.from({ length: 9 }, (_, index) => `/images/certifications/ibm-devops-${index + 1}.webp`),
+    ],
   },
   {
     id: "machine-learning",
@@ -456,17 +237,17 @@ export const certifications = [
       "Statistical Hypothesis Testing",
       "Statistical Inference",
       "Machine Learning",
-      "Data Science"
+      "Data Science",
     ],
-    images: [
-      "/images/certifications/ml-certificate.png"
-    ]
+    images: ["/images/certifications/ml-certificate.webp"],
   },
   {
     id: "sap-professional-fundamentals",
     title: "SAP Professional Fundamentals",
     issuer: "SAP / Coursera",
-    link: "https://www.coursera.org/learn/sap-professional-fundamentals/home/welcome",
+    // À compléter avec le lien de partage Coursera (« Partager le certificat »).
+    // L'ancien lien (…/home/welcome) n'était accessible qu'au compte inscrit.
+    link: null,
     skills: [
       "SAP Ecosystem",
       "Business Transformation",
@@ -474,10 +255,8 @@ export const certifications = [
       "Project Management",
       "Agile",
       "Design Thinking",
-      "Systems Thinking"
+      "Systems Thinking",
     ],
-    images: [
-      "/images/certifications/sap.png"
-    ]
-  }
+    images: ["/images/certifications/sap.webp"],
+  },
 ];

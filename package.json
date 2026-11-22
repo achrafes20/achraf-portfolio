@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "images": "node scripts/optimize-images.mjs",
+    "og": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -14,7 +17,13 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "sharp": "^0.34.2",
     "vite": "^6.2.0"
   }
 }

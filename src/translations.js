@@ -1,5 +1,14 @@
+// Tous les textes du site, en français et en anglais.
+// Les clés de projects.items et experience.items correspondent aux identifiants de src/data/portfolio.js.
+// Champ optionnel d'un projet : "tech" (si les tags se traduisent).
+
 export const translations = {
   fr: {
+    meta: {
+      title: "Achraf Es-serrar — Élève ingénieur Full-Stack & DevOps",
+      description:
+        "Portfolio d'Achraf Es-serrar, élève ingénieur en Génie Informatique (ENSA Tétouan) spécialisé en Full-Stack, DevOps et microservices. Recherche un PFE de 6 mois dès janvier 2027.",
+    },
     nav: {
       home: "Accueil",
       about: "À propos",
@@ -7,7 +16,6 @@ export const translations = {
       experience: "Expérience",
       certifications: "Certifications",
       contact: "Contact",
-      downloadCv: "Télécharger le CV",
     },
     hero: {
       greeting: "Bonjour, je suis",
@@ -16,35 +24,34 @@ export const translations = {
         "Spécialisé en développement Full-Stack, architectures microservices, déploiement conteneurisé et observabilité.",
       projectsButton: "Voir mes projets",
       cvButton: "Télécharger mon CV",
-      statsLabel: "Statistiques",
-      stats: ["Projets réalisés", "Technologies", "Expériences en entreprise"],
+      statsLabel: "Chiffres clés",
+      stats: { projects: "Projets réalisés", technologies: "Technologies", experiences: "Expériences en entreprise" },
     },
     about: {
       title: "À propos de moi",
       subtitle:
         "Élève ingénieur en Génie Informatique spécialisé en développement Full-Stack, DevOps et architectures microservices.",
-      sectionLabel: "Présentation",
       bio: [
-        "Étudiant en 5ᵉ année de Génie Informatique à l’ENSA de Tétouan, je conçois des applications web modernes, des architectures microservices sécurisées et des solutions cloud-native.",
-        "Mes expériences chez HB Développement et NAJA7HOST m’ont permis de travailler sur Spring Boot, React, Laravel, Docker, Kubernetes, GitOps et l’observabilité avec Prometheus, Grafana et Loki.",
+        "Étudiant en 5ᵉ année de Génie Informatique à l’ENSA de Tétouan (diplôme prévu en 2027), je conçois des applications web modernes, des architectures microservices sécurisées et des solutions cloud-native.",
+        "Chez HB Développement, j’ai conçu de bout en bout un SIRH avec Spring Boot et React. Chez NAJA7HOST, j’ai bâti une architecture de microservices Laravel déployée en GitOps sur Kubernetes avec Argo CD, et supervisée avec Prometheus, Grafana et Loki.",
         "Je m’intéresse particulièrement aux systèmes distribués, à l’intelligence artificielle, à l’ingénierie DevOps et aux technologies SAP. Je recherche un PFE de six mois à partir de janvier 2027.",
       ],
+      skillsLabel: "Compétences techniques",
       skillTitles: {
-        development: "Développement",
+        development: "Langages",
         web: "Technologies Web",
-        database: "Bases de données",
-        infrastructure: "Infrastructure",
-        mobile: "Développement Mobile",
-        ai: "IA & Data",
         systems: "Backend & Systèmes",
+        database: "Bases de données",
+        infrastructure: "DevOps & Cloud native",
+        ai: "IA & Data",
+        mobile: "Développement Mobile",
       },
     },
     projects: {
       title: "Mes Projets",
       subtitle:
         "Découvrez mes réalisations techniques mettant en œuvre mes compétences en développement et architecture logicielle.",
-      sectionLabel: "Projets",
-      filterLabel: "Filtrer les projets",
+      filterLabel: "Filtrer les projets par catégorie",
       filters: {
         all: "Tous les projets",
         web: "Web",
@@ -53,16 +60,41 @@ export const translations = {
         ml: "IA / ML",
         mobile: "Mobile",
       },
-      sourceCode: "Code Source",
+      sourceCode: "Code source",
       dockerHub: "Docker Hub",
       countLabel: "projets techniques",
-      countText:
-        "réalisés en Java, C, Laravel, Node.js, ASP.NET et autres technologies",
+      countText: "réalisés en Java, C, Laravel, Node.js, ASP.NET et autres technologies",
       previousImage: "Image précédente",
       nextImage: "Image suivante",
       projectImages: "Images du projet",
       image: "Image",
+      enlarge: "Agrandir les images du projet",
       items: {
+        "nutrition-risk-classifier": {
+          title: "Nutrition Risk Classifier",
+          description:
+            "Pipeline de Machine Learning de bout en bout (méthode CRISP-DM) détectant les produits alimentaires à haut risque nutritionnel à partir des données Open Food Facts. Recall de 0,94 avec XGBoost, API FastAPI, interface Streamlit et packaging Docker.",
+        },
+        agileflow: {
+          title: "AgileFlow - Gestion de Projets Agiles",
+          description:
+            "Plateforme SaaS full-stack de gestion de projets agiles inspirée de Jira : planning, Kanban, diagrammes collaboratifs, chronologie Gantt, rôles, chat temps réel et intégration GitHub.",
+        },
+        sgitu: {
+          title: "SGITU - Sécurisation d’une Architecture Microservices",
+          description:
+            "Backend microservices sécurisé : authentification JWT, gestion des utilisateurs et des rôles, API Gateway centralisant le routage vers neuf microservices, communication événementielle Kafka, cache Redis et supervision Prometheus/Grafana.",
+        },
+        giftplan: {
+          title: "GiftPlan - Cadeaux Collaboratifs",
+          description:
+            "Application mobile collaborative pour organiser des cadeaux de groupe, créer des listes partagées et suivre en temps réel les contributions vers les objectifs de financement.",
+        },
+        chrionline: {
+          title: "ChriOnline - Application E-commerce Desktop",
+          description:
+            "Application e-commerce JavaFX en architecture client-serveur, avec échanges JSON sur TCP/TLS, notifications UDP, paiement simulé sécurisé et administration des produits, commandes et utilisateurs.",
+        },
         ecommerce: {
           title: "Plateforme E-commerce Coopérative Marocaine",
           description:
@@ -106,79 +138,56 @@ export const translations = {
         "salle-sport": {
           title: "Système de Gestion de Salle de Sport",
           description:
-            "Application microservices avec conteneurisation Docker pour la gestion complète d'une salle de sport (membres, planning, paiements).",
+            "Application microservices conteneurisée avec Docker pour la gestion complète d'une salle de sport (membres, planning, paiements).",
         },
         "can-2025": {
-          title: "Site Web CAN 2025 - Portail Officiel",
+          title: "Portail CAN 2025 (projet académique)",
           description:
-            "Portail web complet et réactif présentant la Coupe d'Afrique des Nations 2025 au Maroc. Développé en équipe de 5 avec HTML, CSS et JavaScript.",
+            "Site web réactif présentant la Coupe d'Afrique des Nations 2025 au Maroc, réalisé en équipe de 5 avec HTML, CSS, JavaScript et Bootstrap.",
         },
         automate: {
           title: "Projet Automate",
           description:
             "Implémentation en C d'automates finis (AFD/AFN) avec opérations avancées : union, concaténation, étoile de Kleene, déterminisation et minimisation.",
+          tech: ["C", "Algorithmique", "Théorie des langages"],
         },
         "gestion-etudiants": {
           title: "Système de Gestion des Étudiants",
           description:
             "Application complète en C pour gérer une base de données d'étudiants avec recherche, modification, tri, calcul de moyennes et génération de rapports.",
-        },
-        "nutrition-risk-classifier": {
-          title: "Nutrition Risk Classifier",
-          description:
-            "Solution complète de Machine Learning pour détecter les produits alimentaires à haut risque nutritionnel à partir des données Open Food Facts, avec API FastAPI, interface Streamlit et déploiement Docker.",
-        },
-        agileflow: {
-          title: "AgileFlow - Gestion de Projets Agiles",
-          description:
-            "Plateforme full-stack de gestion de projets agiles inspirée de Jira, avec planning, Kanban, diagrammes collaboratifs, chronologie Gantt, rôles, chat temps réel et intégration GitHub.",
-        },
-        sgitu: {
-          title: "SGITU - Sécurisation d’une Architecture Microservices",
-          description:
-            "Backend microservices sécurisé avec authentification JWT, gestion des utilisateurs et des rôles, API Gateway centralisant le routage vers neuf microservices, communication événementielle Kafka, cache Redis et supervision Prometheus/Grafana.",
-        },
-        giftplan: {
-          title: "GiftPlan - Cadeaux Collaboratifs",
-          description:
-            "Application mobile collaborative pour organiser des cadeaux de groupe, créer des listes partagées et suivre en temps réel les contributions vers les objectifs de financement.",
-        },
-        chrionline: {
-          title: "ChriOnline - Application E-commerce Desktop",
-          description:
-            "Application e-commerce JavaFX en architecture client-serveur, avec échanges JSON sur TCP/TLS, notifications UDP, paiement simulé sécurisé et administration des produits, commandes et utilisateurs.",
+          tech: ["C", "Structures de données", "Fichiers", "QuickSort"],
         },
       },
     },
     experience: {
       title: "Expérience & Formation",
       subtitle: "Mon parcours académique et professionnel dans le domaine de l'informatique.",
-      sectionLabel: "Expérience et formation",
       technicalEnvironment: "Environnement technique :",
       items: {
         formation: {
-          date: "2022 - Présent",
-          title: "Diplôme d'ingénieur d'État en Génie Informatique",
-          place: "École Nationale des Sciences Appliquées, Tétouan",
+          date: "2022 – 2027",
+          title: "Cycle ingénieur d'État en Génie Informatique",
+          place: "École Nationale des Sciences Appliquées (ENSA), Tétouan",
           description:
-            "Formation approfondie en architecture logicielle, bases de données, réseaux et systèmes d'information. Acquisition de compétences en développement web, intelligence artificielle et ingénierie logicielle.",
+            "Formation approfondie en architecture logicielle, bases de données, réseaux et systèmes d'information, avec des compétences pratiques en développement web, intelligence artificielle et ingénierie logicielle. Diplôme prévu en 2027.",
+          tech: ["Architecture logicielle", "Bases de données", "Réseaux", "IA"],
         },
         pfa: {
           date: "Juillet – Août 2026",
-          title: "Projet de Fin d'Année (PFA) - Développeur Full-Stack (Mentora RH)",
-          place: "HB Développement - Tétouan",
+          title: "Stage PFA – Ingénieur Logiciel Full-Stack (SIRH Mentora RH)",
+          place: "HB Développement – Tétouan",
           description:
-            "Conception et développement d'une solution SIRH (Mentora RH) en architecture Full-Stack. Mise en place d'une authentification JWT hybride, d'un système de pointage BYOD, de la gestion des congés (Ledger), et génération automatisée de documents RH (PDF, Mattermost, n8n).",
+            "Conception et développement de bout en bout d'un SIRH web qui digitalise et automatise les processus RH : accès sécurisés (JWT hybride, RBAC), traçabilité des congés grâce au pattern Ledger, pointage BYOD par QR code avec détection d'anomalies et automatisation documentaire via n8n.",
         },
         work: {
-          date: "Juillet – Août 2026",
-          title: "Stage en Développement Web Full-Stack",
-          place: "NAJA7HOST - Tétouan",
+          date: "Juillet – Août 2025",
+          title: "Stage en Ingénierie Logicielle & DevOps",
+          place: "NAJA7HOST – Tétouan",
           description:
-            "Conception et développement d'une application web d'e-commerce complète avec gestion des produits, commandes, panier et utilisateurs. Interface d'administration moderne et responsive.",
+            "Conception d'une architecture e-commerce de 6 microservices (Laravel 12, pattern BFF, événements RabbitMQ) intégrant un chatbot IA (Google Gemini) connecté aux données métier en temps réel. Supervision complète (Golden Signals sous Grafana, métriques Prometheus, logs Loki), sécurisation (JWT, OWASP) et déploiement GitOps sur Kubernetes avec Argo CD.",
         },
         school: {
-          date: "2021 - 2022",
+          date: "2021 – 2022",
           title: "Baccalauréat en Sciences Physiques et Chimiques",
           place: "Lycée Mohamed El-Mekki Naciri, Tétouan",
           description:
@@ -189,15 +198,13 @@ export const translations = {
     certifications: {
       title: "Certifications",
       subtitle: "Certifications professionnelles validant mes compétences techniques.",
-      sectionLabel: "Certifications",
       viewCertificate: "Voir le certificat",
-      coursesLabel: "Cours inclus :",
+      imageAlt: "certificat",
+      openImage: "Agrandir le certificat",
     },
     contact: {
       headerTitle: "Contactez-moi",
-      headerSubtitle:
-        "Disponible pour des opportunités de stage, projets ou collaborations techniques.",
-      sectionLabel: "Contact",
+      headerSubtitle: "Disponible pour des opportunités de stage, projets ou collaborations techniques.",
       email: "Email",
       phone: "Téléphone",
       location: "Localisation",
@@ -208,8 +215,7 @@ export const translations = {
       copyUnavailable: "Copie indisponible sur ce navigateur.",
       badge: "⚡ Disponible · Tétouan, Maroc",
       title: "Travaillons ensemble",
-      subtitle:
-        "Disponible pour stages, alternances et projets collaboratifs. N'hésitez pas à me contacter !",
+      subtitle: "Disponible pour stages, alternances et projets collaboratifs. N'hésitez pas à me contacter !",
       form: {
         nameLabel: "Nom complet",
         namePlaceholder: "Votre nom",
@@ -219,29 +225,45 @@ export const translations = {
         subjectPlaceholder: "Stage · Collaboration · Question",
         messageLabel: "Message",
         messagePlaceholder: "Bonjour Achraf, je vous contacte au sujet de...",
+        honeypotLabel: "Ne pas remplir ce champ",
         sending: "Envoi...",
         submit: "Envoyer le message",
         cv: "Télécharger CV",
         sendingStatus: "Envoi en cours...",
-        savedError: "Impossible d’enregistrer le message dans Supabase.",
-        resendError: "Le service Resend a refusé l’email.",
-        success: "Message envoyé. Merci pour votre contact.",
+        success: "Message envoyé. Merci pour votre contact, je vous réponds rapidement.",
         successToast: "Message envoyé avec succès.",
-        unknownError: "Erreur inconnue.",
-        emailNotSent: "Message enregistré, mais email non envoyé :",
-        errorToast: "L’email n’a pas pu être envoyé.",
+        errorToast: "Le message n’a pas pu être envoyé.",
+        errors: {
+          captcha_required: "Merci de valider la vérification anti-robot avant l’envoi.",
+          captcha_failed: "La vérification anti-robot a échoué. Merci de réessayer.",
+          validation_error: "Certains champs sont invalides. Vérifiez votre saisie puis réessayez.",
+          rate_limited:
+            "Trop de messages envoyés depuis votre connexion. Réessayez dans une heure ou écrivez-moi directement par email.",
+          origin_not_allowed: "Envoi refusé depuis cette adresse.",
+          payload_too_large: "Votre message est trop long.",
+          email_failed:
+            "Votre message a bien été enregistré, mais la notification email a échoué. Je le lirai tout de même.",
+          server_error:
+            "Le service de messagerie est momentanément indisponible. Écrivez-moi directement à esserrar.achraf@gmail.com.",
+          network_error: "Connexion impossible. Vérifiez votre réseau puis réessayez.",
+        },
       },
     },
     footer: {
       description:
-        "Ingénieur en Génie Informatique passionné par l'innovation technologique et le développement de solutions digitales performantes.",
+        "Élève ingénieur en Génie Informatique, passionné par l'innovation technologique et le développement de solutions digitales performantes.",
       navigation: "Navigation",
       rights: "Tous droits réservés.",
     },
     ui: {
+      skipToContent: "Aller au contenu",
       downloadStarted: "Téléchargement du CV en cours...",
-      changeTheme: "Changer le thème",
-      menu: "Menu",
+      changeThemeToDark: "Activer le thème sombre",
+      changeThemeToLight: "Activer le thème clair",
+      switchLanguage: "Switch to English",
+      menu: "Ouvrir le menu",
+      closeMenu: "Fermer le menu",
+      mainNavigation: "Navigation principale",
       backToTop: "Retour en haut",
       close: "Fermer",
       previousImage: "Image précédente",
@@ -250,9 +272,15 @@ export const translations = {
       projectImage: "Image",
       technologiesLabel: "Technologies maîtrisées",
       footerNavigation: "Navigation du pied de page",
+      logoAlt: "Logo d'Achraf Es-serrar",
     },
   },
   en: {
+    meta: {
+      title: "Achraf Es-serrar — Full-Stack & DevOps Engineering Student",
+      description:
+        "Portfolio of Achraf Es-serrar, Computer Engineering student at ENSA Tétouan specializing in full-stack development, DevOps and microservices. Seeking a 6-month final-year internship from January 2027.",
+    },
     nav: {
       home: "Home",
       about: "About",
@@ -260,7 +288,6 @@ export const translations = {
       experience: "Experience",
       certifications: "Certifications",
       contact: "Contact",
-      downloadCv: "Download CV",
     },
     hero: {
       greeting: "Hello, I am",
@@ -269,35 +296,33 @@ export const translations = {
         "Specialized in full-stack development, microservices architectures, containerized deployment, and observability.",
       projectsButton: "View my projects",
       cvButton: "Download my CV",
-      statsLabel: "Statistics",
-      stats: ["Projects completed", "Technologies", "Industry experiences"],
+      statsLabel: "Key figures",
+      stats: { projects: "Projects completed", technologies: "Technologies", experiences: "Industry internships" },
     },
     about: {
       title: "About me",
       subtitle:
         "Computer Engineering student specializing in full-stack development, DevOps, and microservices architectures.",
-      sectionLabel: "About",
       bio: [
-        "As a fifth-year Computer Engineering student at ENSA Tétouan, I build modern web applications, secure microservices architectures, and cloud-native solutions.",
-        "My experiences at HB Développement and NAJA7HOST allowed me to work with Spring Boot, React, Laravel, Docker, Kubernetes, GitOps, and observability using Prometheus, Grafana, and Loki.",
+        "As a fifth-year Computer Engineering student at ENSA Tétouan (graduating in 2027), I build modern web applications, secure microservices architectures, and cloud-native solutions.",
+        "At HB Développement, I designed and built an end-to-end HRIS with Spring Boot and React. At NAJA7HOST, I built a Laravel microservices architecture deployed with GitOps on Kubernetes using Argo CD, and monitored with Prometheus, Grafana, and Loki.",
         "I am particularly interested in distributed systems, artificial intelligence, DevOps engineering, and SAP technologies. I am seeking a six-month final-year internship starting in January 2027.",
       ],
+      skillsLabel: "Technical skills",
       skillTitles: {
-        development: "Development",
+        development: "Languages",
         web: "Web Technologies",
-        database: "Databases",
-        infrastructure: "Infrastructure",
-        mobile: "Mobile Development",
-        ai: "AI & Data",
         systems: "Backend & Systems",
+        database: "Databases",
+        infrastructure: "DevOps & Cloud native",
+        ai: "AI & Data",
+        mobile: "Mobile Development",
       },
     },
     projects: {
       title: "My Projects",
-      subtitle:
-        "Explore my technical projects showcasing my software development and architecture skills.",
-      sectionLabel: "Projects",
-      filterLabel: "Filter projects",
+      subtitle: "Explore my technical projects showcasing my software development and architecture skills.",
+      filterLabel: "Filter projects by category",
       filters: {
         all: "All projects",
         web: "Web",
@@ -306,16 +331,41 @@ export const translations = {
         ml: "AI / ML",
         mobile: "Mobile",
       },
-      sourceCode: "Source Code",
+      sourceCode: "Source code",
       dockerHub: "Docker Hub",
       countLabel: "technical projects",
-      countText:
-        "built with Java, C, Laravel, Node.js, ASP.NET, and other technologies",
+      countText: "built with Java, C, Laravel, Node.js, ASP.NET, and other technologies",
       previousImage: "Previous image",
       nextImage: "Next image",
       projectImages: "Project images",
       image: "Image",
+      enlarge: "Enlarge project images",
       items: {
+        "nutrition-risk-classifier": {
+          title: "Nutrition Risk Classifier",
+          description:
+            "End-to-end machine learning pipeline (CRISP-DM) detecting nutritionally high-risk food products from Open Food Facts data. 0.94 recall with XGBoost, FastAPI REST API, Streamlit interface, and Docker packaging.",
+        },
+        agileflow: {
+          title: "AgileFlow - Agile Project Management",
+          description:
+            "Jira-inspired full-stack SaaS platform for agile project management featuring planning, Kanban, collaborative diagrams, a Gantt timeline, project roles, real-time chat, and GitHub integration.",
+        },
+        sgitu: {
+          title: "SGITU - Securing a Microservices Architecture",
+          description:
+            "Secure microservices backend featuring JWT authentication, user and role management, an API Gateway centralizing routing to nine microservices, Kafka event-driven communication, Redis caching, and Prometheus/Grafana monitoring.",
+        },
+        giftplan: {
+          title: "GiftPlan - Collaborative Group Gifts",
+          description:
+            "Collaborative mobile application for organizing group gifts, creating shared wish lists, and tracking contributions toward funding goals in real time.",
+        },
+        chrionline: {
+          title: "ChriOnline - Desktop E-commerce Application",
+          description:
+            "Client-server JavaFX e-commerce application featuring JSON communication over TCP/TLS, UDP notifications, secure simulated payments, and product, order, and user administration.",
+        },
         ecommerce: {
           title: "Moroccan Cooperative E-commerce Platform",
           description:
@@ -362,9 +412,9 @@ export const translations = {
             "Dockerized microservices application for complete fitness center management, including members, schedules, and payments.",
         },
         "can-2025": {
-          title: "AFCON 2025 Official Portal",
+          title: "AFCON 2025 Portal (academic project)",
           description:
-            "Complete responsive portal covering the 2025 Africa Cup of Nations in Morocco, developed by a team of five with HTML, CSS, and JavaScript.",
+            "Responsive website covering the 2025 Africa Cup of Nations in Morocco, built by a team of five with HTML, CSS, JavaScript, and Bootstrap.",
         },
         automate: {
           title: "Automata Project",
@@ -378,63 +428,37 @@ export const translations = {
             "Complete C application for managing a student database with search, editing, sorting, average calculation, and report generation.",
           tech: ["C", "Data Structures", "Files", "QuickSort"],
         },
-        "nutrition-risk-classifier": {
-          title: "Nutrition Risk Classifier",
-          description:
-            "End-to-end machine learning solution for detecting nutritionally high-risk food products from Open Food Facts data, with a FastAPI API, Streamlit interface, and Docker deployment.",
-        },
-        agileflow: {
-          title: "AgileFlow - Agile Project Management",
-          description:
-            "Jira-inspired full-stack agile project management platform featuring planning, Kanban, collaborative diagrams, a Gantt timeline, project roles, real-time chat, and GitHub integration.",
-        },
-        sgitu: {
-          title: "SGITU - Securing a Microservices Architecture",
-          description:
-            "Secure microservices backend featuring JWT authentication, user and role management, an API Gateway centralizing routing to nine microservices, Kafka event-driven communication, Redis caching, and Prometheus/Grafana monitoring.",
-        },
-        giftplan: {
-          title: "GiftPlan - Collaborative Group Gifts",
-          description:
-            "Collaborative mobile application for organizing group gifts, creating shared wish lists, and tracking contributions toward funding goals in real time.",
-        },
-        chrionline: {
-          title: "ChriOnline - Desktop E-commerce Application",
-          description:
-            "Client-server JavaFX e-commerce application featuring JSON communication over TCP/TLS, UDP notifications, secure simulated payments, and product, order, and user administration.",
-        },
       },
     },
     experience: {
       title: "Experience & Education",
       subtitle: "My academic and professional journey in computer engineering.",
-      sectionLabel: "Experience and education",
       technicalEnvironment: "Technical environment:",
       items: {
         formation: {
-          date: "2022 - Present",
+          date: "2022 – 2027",
           title: "State Engineering Degree in Computer Engineering",
-          place: "National School of Applied Sciences, Tétouan",
+          place: "National School of Applied Sciences (ENSA), Tétouan",
           description:
-            "Advanced training in software architecture, databases, networks, and information systems, with practical skills in web development, artificial intelligence, and software engineering.",
+            "Advanced training in software architecture, databases, networks, and information systems, with practical skills in web development, artificial intelligence, and software engineering. Expected graduation: 2027.",
           tech: ["Software Architecture", "Databases", "Networks", "AI"],
         },
         pfa: {
           date: "July – August 2026",
-          title: "End-of-Year Project (PFA) - Full-Stack Developer (Mentora HR)",
-          place: "HB Développement - Tétouan",
+          title: "End-of-Year Internship – Full-Stack Software Engineer (Mentora HRIS)",
+          place: "HB Développement – Tétouan",
           description:
-            "Designed and developed the Mentora HRIS solution using a Full-Stack architecture. Implemented a hybrid JWT authentication, an innovative BYOD attendance system, a Ledger-based leave management system, and automated HR document generation (PDF, Mattermost, n8n).",
+            "Designed and built end-to-end a web-based HRIS that digitalizes and automates HR processes: secured access (hybrid JWT, RBAC), leave traceability using the Ledger pattern, a BYOD QR-code attendance system with anomaly detection, and document automation via n8n.",
         },
         work: {
-          date: "July – August 2026",
-          title: "Full-Stack Web Development Internship",
-          place: "NAJA7HOST - Tétouan",
+          date: "July – August 2025",
+          title: "Software Engineering & DevOps Internship",
+          place: "NAJA7HOST – Tétouan",
           description:
-            "Designed and developed a complete e-commerce web application with product, order, cart, and user management, plus a modern responsive admin interface.",
+            "Designed an e-commerce architecture of 6 microservices (Laravel 12, BFF pattern, RabbitMQ events) with an AI chatbot (Google Gemini) accessing business data in real time. Set up full monitoring (Golden Signals in Grafana, Prometheus metrics, Loki logs), secured the services (JWT, OWASP), and automated GitOps deployment on Kubernetes with Argo CD.",
         },
         school: {
-          date: "2021 - 2022",
+          date: "2021 – 2022",
           title: "Baccalaureate in Physical and Chemical Sciences",
           place: "Mohamed El-Mekki Naciri High School, Tétouan",
           description:
@@ -445,15 +469,13 @@ export const translations = {
     certifications: {
       title: "Certifications",
       subtitle: "Professional certifications validating my technical skills.",
-      sectionLabel: "Certifications",
-      viewCertificate: "View Certificate",
-      coursesLabel: "Included Courses:",
+      viewCertificate: "View certificate",
+      imageAlt: "certificate",
+      openImage: "Enlarge certificate",
     },
     contact: {
       headerTitle: "Contact me",
-      headerSubtitle:
-        "Available for internships, projects, and technical collaborations.",
-      sectionLabel: "Contact",
+      headerSubtitle: "Available for internships, projects, and technical collaborations.",
       email: "Email",
       phone: "Phone",
       location: "Location",
@@ -464,8 +486,7 @@ export const translations = {
       copyUnavailable: "Copying is unavailable in this browser.",
       badge: "⚡ Available · Tétouan, Morocco",
       title: "Let's work together",
-      subtitle:
-        "Available for internships, apprenticeships, and collaborative projects. Feel free to reach out!",
+      subtitle: "Available for internships, apprenticeships, and collaborative projects. Feel free to reach out!",
       form: {
         nameLabel: "Full name",
         namePlaceholder: "Your name",
@@ -475,17 +496,28 @@ export const translations = {
         subjectPlaceholder: "Internship · Collaboration · Question",
         messageLabel: "Message",
         messagePlaceholder: "Hello Achraf, I am reaching out about...",
+        honeypotLabel: "Do not fill in this field",
         sending: "Sending...",
         submit: "Send message",
         cv: "Download CV",
         sendingStatus: "Sending...",
-        savedError: "Unable to save the message in Supabase.",
-        resendError: "Resend rejected the email.",
-        success: "Message sent. Thank you for reaching out.",
+        success: "Message sent. Thank you for reaching out, I will get back to you shortly.",
         successToast: "Message sent successfully.",
-        unknownError: "Unknown error.",
-        emailNotSent: "Message saved, but email not sent:",
-        errorToast: "The email could not be sent.",
+        errorToast: "The message could not be sent.",
+        errors: {
+          captcha_required: "Please complete the anti-bot check before sending.",
+          captcha_failed: "The anti-bot check failed. Please try again.",
+          validation_error: "Some fields are invalid. Please check your input and try again.",
+          rate_limited:
+            "Too many messages sent from your connection. Please try again in an hour or email me directly.",
+          origin_not_allowed: "Sending is not allowed from this address.",
+          payload_too_large: "Your message is too long.",
+          email_failed:
+            "Your message was saved, but the email notification failed. I will still read it.",
+          server_error:
+            "The messaging service is temporarily unavailable. Please email me directly at esserrar.achraf@gmail.com.",
+          network_error: "Unable to connect. Please check your network and try again.",
+        },
       },
     },
     footer: {
@@ -495,9 +527,14 @@ export const translations = {
       rights: "All rights reserved.",
     },
     ui: {
+      skipToContent: "Skip to content",
       downloadStarted: "CV download started...",
-      changeTheme: "Change theme",
-      menu: "Menu",
+      changeThemeToDark: "Switch to dark theme",
+      changeThemeToLight: "Switch to light theme",
+      switchLanguage: "Passer en français",
+      menu: "Open menu",
+      closeMenu: "Close menu",
+      mainNavigation: "Main navigation",
       backToTop: "Back to top",
       close: "Close",
       previousImage: "Previous image",
@@ -506,6 +543,7 @@ export const translations = {
       projectImage: "Image",
       technologiesLabel: "Technology stack",
       footerNavigation: "Footer navigation",
+      logoAlt: "Achraf Es-serrar logo",
     },
   },
 };

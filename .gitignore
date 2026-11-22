@@ -1,5 +1,13 @@
 node_modules
 dist
-.env
 .DS_Store
 *.local
+
+# Variables d'environnement (seul .env.example est versionné)
+.env
+.env.*
+!.env.example
+
+# Fichiers temporaires de la CLI Supabase
+supabase/.temp
+supabase/.branches

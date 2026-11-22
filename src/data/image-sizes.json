@@ -1,0 +1,334 @@
+{
+  "/images/agileflow/img-1.webp": {
+    "width": 1600,
+    "height": 722
+  },
+  "/images/agileflow/img-2.webp": {
+    "width": 1600,
+    "height": 819
+  },
+  "/images/agileflow/img-3.webp": {
+    "width": 1600,
+    "height": 830
+  },
+  "/images/agileflow/img-4.webp": {
+    "width": 1600,
+    "height": 814
+  },
+  "/images/agileflow/img-5.webp": {
+    "width": 1600,
+    "height": 813
+  },
+  "/images/agileflow/img-6.webp": {
+    "width": 1600,
+    "height": 728
+  },
+  "/images/agileflow/img-7.webp": {
+    "width": 1600,
+    "height": 792
+  },
+  "/images/agileflow/img-8.webp": {
+    "width": 1587,
+    "height": 683
+  },
+  "/images/agileflow/img-9.webp": {
+    "width": 1600,
+    "height": 819
+  },
+  "/images/automate/img1.webp": {
+    "width": 571,
+    "height": 504
+  },
+  "/images/automate/img2.webp": {
+    "width": 929,
+    "height": 434
+  },
+  "/images/can/img1.webp": {
+    "width": 1600,
+    "height": 771
+  },
+  "/images/can/img2.webp": {
+    "width": 1600,
+    "height": 773
+  },
+  "/images/can/img3.webp": {
+    "width": 1600,
+    "height": 753
+  },
+  "/images/can/img4.webp": {
+    "width": 1600,
+    "height": 761
+  },
+  "/images/can/img5.webp": {
+    "width": 1600,
+    "height": 773
+  },
+  "/images/can/img6.webp": {
+    "width": 1600,
+    "height": 767
+  },
+  "/images/can/img7.webp": {
+    "width": 1600,
+    "height": 764
+  },
+  "/images/certifications/ibm-devops-1.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-2.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-3.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-4.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-5.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-6.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-7.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-8.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-9.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ibm-devops-global.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/ml-certificate.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/certifications/sap.webp": {
+    "width": 1600,
+    "height": 1236
+  },
+  "/images/chrionline/img-1.webp": {
+    "width": 1600,
+    "height": 785
+  },
+  "/images/chrionline/img-2.webp": {
+    "width": 1600,
+    "height": 835
+  },
+  "/images/chrionline/img-3.webp": {
+    "width": 1600,
+    "height": 652
+  },
+  "/images/ecommerce/img1.webp": {
+    "width": 1600,
+    "height": 762
+  },
+  "/images/ecommerce/img2.webp": {
+    "width": 1600,
+    "height": 755
+  },
+  "/images/ecommerce/img3.webp": {
+    "width": 1600,
+    "height": 745
+  },
+  "/images/espace-etudiant/img1.webp": {
+    "width": 1081,
+    "height": 560
+  },
+  "/images/espace-etudiant/img2.webp": {
+    "width": 1083,
+    "height": 731
+  },
+  "/images/espace-etudiant/img3.webp": {
+    "width": 1025,
+    "height": 544
+  },
+  "/images/espace-etudiant/img4.webp": {
+    "width": 1081,
+    "height": 563
+  },
+  "/images/espace-etudiant/img5.webp": {
+    "width": 1086,
+    "height": 520
+  },
+  "/images/espace-etudiant/img6.webp": {
+    "width": 1083,
+    "height": 520
+  },
+  "/images/espace-etudiant/img7.webp": {
+    "width": 1085,
+    "height": 521
+  },
+  "/images/espace-etudiant/img8.webp": {
+    "width": 1082,
+    "height": 511
+  },
+  "/images/etudiants-c/img1.webp": {
+    "width": 734,
+    "height": 203
+  },
+  "/images/event/img1.webp": {
+    "width": 1600,
+    "height": 692
+  },
+  "/images/event/img2.webp": {
+    "width": 1600,
+    "height": 701
+  },
+  "/images/event/img3.webp": {
+    "width": 1600,
+    "height": 702
+  },
+  "/images/event/img4.webp": {
+    "width": 1511,
+    "height": 897
+  },
+  "/images/fitness/img1.webp": {
+    "width": 1600,
+    "height": 756
+  },
+  "/images/fitness/img2.webp": {
+    "width": 1143,
+    "height": 541
+  },
+  "/images/foot/img1.webp": {
+    "width": 945,
+    "height": 392
+  },
+  "/images/foot/img2.webp": {
+    "width": 950,
+    "height": 519
+  },
+  "/images/foot/img3.webp": {
+    "width": 934,
+    "height": 434
+  },
+  "/images/foot/img4.webp": {
+    "width": 964,
+    "height": 426
+  },
+  "/images/gaming-store/img1.webp": {
+    "width": 1600,
+    "height": 736
+  },
+  "/images/gaming-store/img2.webp": {
+    "width": 1600,
+    "height": 760
+  },
+  "/images/gaming-store/img3.webp": {
+    "width": 1600,
+    "height": 747
+  },
+  "/images/gaming-store/img4.webp": {
+    "width": 1600,
+    "height": 757
+  },
+  "/images/gestion-pharmacie/img1.webp": {
+    "width": 1401,
+    "height": 758
+  },
+  "/images/gestion-pharmacie/img2.webp": {
+    "width": 1401,
+    "height": 757
+  },
+  "/images/gestion-pharmacie/img3.webp": {
+    "width": 1397,
+    "height": 757
+  },
+  "/images/gestion-pharmacie/img4.webp": {
+    "width": 1397,
+    "height": 761
+  },
+  "/images/gestion-pharmacie/img5.webp": {
+    "width": 1398,
+    "height": 759
+  },
+  "/images/gestion-pharmacie/img6.webp": {
+    "width": 1398,
+    "height": 760
+  },
+  "/images/gestion-pharmacie/img7.webp": {
+    "width": 1400,
+    "height": 761
+  },
+  "/images/giftplan/image-1.webp": {
+    "width": 317,
+    "height": 637
+  },
+  "/images/giftplan/image-2.webp": {
+    "width": 566,
+    "height": 495
+  },
+  "/images/giftplan/image-3.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/nutrition-risk-classifier/img-1.webp": {
+    "width": 1600,
+    "height": 813
+  },
+  "/images/nutrition-risk-classifier/img-2.webp": {
+    "width": 1600,
+    "height": 840
+  },
+  "/images/servicepro/img1.webp": {
+    "width": 963,
+    "height": 423
+  },
+  "/images/servicepro/img2.webp": {
+    "width": 965,
+    "height": 461
+  },
+  "/images/servicepro/img3.webp": {
+    "width": 963,
+    "height": 430
+  },
+  "/images/servicepro/img4.webp": {
+    "width": 966,
+    "height": 379
+  },
+  "/images/servicepro/img5.webp": {
+    "width": 961,
+    "height": 379
+  },
+  "/images/sgitu/grafana-global-dashboard.webp": {
+    "width": 1600,
+    "height": 724
+  },
+  "/images/sgitu/prometheus-targets-all-up.webp": {
+    "width": 1600,
+    "height": 718
+  },
+  "/images/sgitu/prometheus-targets-all-up2.webp": {
+    "width": 1600,
+    "height": 629
+  },
+  "/images/space-defender-game/game-icon.webp": {
+    "width": 200,
+    "height": 200
+  },
+  "/images/space-defender-game/img1.webp": {
+    "width": 956,
+    "height": 665
+  },
+  "/images/space-defender-game/img2.webp": {
+    "width": 986,
+    "height": 580
+  },
+  "/images/space-defender-game/img3.webp": {
+    "width": 666,
+    "height": 379
+  }
+}

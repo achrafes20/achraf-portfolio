@@ -306,7 +306,8 @@ img {
   position: relative;
   width: 80px;
   height: 92px;
-  cursor: pointer;
+  cursor: default;
+  opacity: 0;
   animation: hexReveal 0.4s ease var(--reveal-delay) forwards;
 }
 
@@ -709,7 +710,7 @@ img {
 .stat-tile span {
   margin-top: 4px;
   color: #64748b;
-  font-family: "Inter", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
   line-height: 1.35;
 }
@@ -897,8 +898,8 @@ img {
 .project-media img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  object-position: center;
+  object-fit: cover;
+  object-position: top center;
   display: block;
   transition: transform 300ms ease;
 }
@@ -1686,15 +1687,14 @@ img {
     align-items: stretch;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 8px;
-    background: rgba(248, 249, 252, 0.96);
+    background: #f8f9fc;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(14px);
     padding: 0.55rem;
   }
 
   .dark .nav-links {
     border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(10, 10, 15, 0.96);
+    background: #0a0a0f;
   }
 
   .nav-links.open {
@@ -2039,3 +2039,164 @@ img {
 .cert-card .tech-stack {
   margin-top: 1rem;
 }
+
+/* ==========================================================================
+   Thème global, accessibilité et nouveaux éléments
+   ========================================================================== */
+
+/* Le thème est appliqué sur <html> dès le chargement (script inline de index.html) :
+   fond de page et barres de défilement cohérents, sans flash blanc. */
+html {
+  background: #f7fafc;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  background: #090d11;
+  color-scheme: dark;
+}
+
+/* Lien d'évitement : visible uniquement au clavier. */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 800;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* Focus clavier visible et homogène sur tous les éléments interactifs. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Lien de navigation de la section visible. */
+.nav-links a.active {
+  background: rgba(13, 148, 136, 0.12);
+  color: var(--primary);
+}
+
+.dark .nav-links a.active {
+  background: rgba(40, 195, 189, 0.14);
+  color: var(--primary-strong);
+}
+
+/* Listes sémantiques sans puces. */
+.hero-stats,
+.skills-grid,
+.timeline-list {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.skills-grid,
+.timeline-list {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.timeline-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Image de projet cliquable (bouton plein cadre). */
+.project-media-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.project-media-trigger:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Miniatures de certificats cliquables. */
+.cert-image-btn {
+  flex: 0 0 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  cursor: zoom-in;
+  scroll-snap-align: center;
+}
+
+.cert-images-scroll .cert-image-btn img {
+  width: 100%;
+  height: auto;
+}
+
+.cert-image-btn:hover img,
+.cert-image-btn:focus-visible img {
+  transform: scale(1.03);
+}
+
+/* Champ piège à robots, hors écran. */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status-empty {
+  margin: 0;
+}
+
+.turnstile-box {
+  min-height: 65px;
+  margin-top: 0.4rem;
+}
+
+/* Respect de la préférence « réduire les animations ». */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hex-cell {
+    opacity: 1;
+    animation: none !important;
+  }
+
+  .hex-float {
+    animation: none !important;
+  }
+}
+
+main:focus {
+  outline: none;
+}
+

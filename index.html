@@ -3,20 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achraf Es-serrar — Élève ingénieur Full-Stack &amp; DevOps</title>
     <meta
       name="description"
-      content="Portfolio React d'Achraf Es-serrar, étudiant ingénieur en Génie Informatique à l'ENSA de Tétouan."
+      content="Portfolio d'Achraf Es-serrar, élève ingénieur en Génie Informatique (ENSA Tétouan) spécialisé en Full-Stack, DevOps et microservices. Recherche un PFE de 6 mois dès janvier 2027."
     />
-    <title>Achraf Es-serrar | Portfolio React</title>
+    <meta name="author" content="Achraf Es-serrar" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f7fafc" />
+    <link rel="canonical" href="https://esserrar-achraf.vercel.app/" />
     <link rel="icon" type="image/png" href="/logo_sombre.png" />
+    <link rel="apple-touch-icon" href="/logo_sombre.png" />
+
+    <!-- Aperçu lors du partage (LinkedIn, WhatsApp, Slack, X...) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Achraf Es-serrar" />
+    <meta property="og:url" content="https://esserrar-achraf.vercel.app/" />
+    <meta property="og:title" content="Achraf Es-serrar — Élève ingénieur Full-Stack &amp; DevOps" />
+    <meta
+      property="og:description"
+      content="Portfolio d'Achraf Es-serrar, élève ingénieur en Génie Informatique (ENSA Tétouan) spécialisé en Full-Stack, DevOps et microservices. Recherche un PFE de 6 mois dès janvier 2027."
+    />
+    <meta property="og:image" content="https://esserrar-achraf.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Achraf Es-serrar — Élève ingénieur Full-Stack &amp; DevOps" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="profile:first_name" content="Achraf" />
+    <meta property="profile:last_name" content="Es-serrar" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Achraf Es-serrar — Élève ingénieur Full-Stack &amp; DevOps" />
+    <meta
+      name="twitter:description"
+      content="Portfolio d'Achraf Es-serrar, élève ingénieur en Génie Informatique (ENSA Tétouan) spécialisé en Full-Stack, DevOps et microservices."
+    />
+    <meta name="twitter:image" content="https://esserrar-achraf.vercel.app/og-image.png" />
+
+    <!-- Données structurées pour les moteurs de recherche -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Achraf Es-serrar",
+        "jobTitle": "Élève ingénieur Full-Stack & DevOps",
+        "url": "https://esserrar-achraf.vercel.app/",
+        "image": "https://esserrar-achraf.vercel.app/og-image.png",
+        "email": "mailto:esserrar.achraf@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Tétouan", "addressCountry": "MA" },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "École Nationale des Sciences Appliquées de Tétouan"
+        },
+        "knowsAbout": ["Full-Stack", "DevOps", "Microservices", "Spring Boot", "React", "Kubernetes", "Docker", "Machine Learning"],
+        "sameAs": [
+          "https://github.com/achrafes20",
+          "https://linkedin.com/in/achraf-es-serrar-300bb2279"
+        ]
+      }
+    </script>
+
+    <!-- Applique le thème avant le premier rendu (évite le flash blanc en mode sombre). -->
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (error) {}
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <noscript>
+      Ce portfolio nécessite JavaScript. Contact : esserrar.achraf@gmail.com — https://github.com/achrafes20
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

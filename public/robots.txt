@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://esserrar-achraf.vercel.app/sitemap.xml

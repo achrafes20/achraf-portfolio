@@ -2248,3 +2248,84 @@ main:focus {
   .skill-card:nth-child(7) { grid-column: 1; grid-row: 3; }
   .skill-card:nth-child(8) { grid-column: 2; grid-row: 3; }
 }
+
+/* Menu de téléchargement du CV : choix de la version française ou anglaise. */
+.cv-menu {
+  position: relative;
+  display: inline-flex;
+}
+
+.cv-menu-chevron {
+  transition: transform 160ms ease;
+}
+
+.cv-menu-chevron.open {
+  transform: rotate(180deg);
+}
+
+.cv-menu-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 30;
+  min-width: 100%;
+  width: max-content;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  animation: lightboxFadeIn 140ms ease;
+}
+
+.cv-menu-list.up {
+  top: auto;
+  bottom: calc(100% + 8px);
+}
+
+.cv-menu-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.cv-menu-list a:hover,
+.cv-menu-list a:focus-visible {
+  background: var(--surface-strong);
+  color: var(--primary);
+  outline: none;
+}
+
+.cv-menu-list small {
+  margin-left: auto;
+  padding: 0.12rem 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  /* Dans le formulaire, le bouton occupe toute la largeur comme les autres. */
+  .contact-actions .cv-menu,
+  .contact-actions .cv-menu > .btn {
+    width: 100%;
+  }
+
+  /* Bouton du hero à droite : le menu s'aligne sur son bord droit pour rester dans l'écran. */
+  .hero-actions .cv-menu-list {
+    left: auto;
+    right: 0;
+  }
+
+  .cv-menu-list a {
+    white-space: nowrap;
+  }
+}

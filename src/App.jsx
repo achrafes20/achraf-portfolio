@@ -13,7 +13,6 @@ import { useLanguage } from "./LanguageContext.jsx";
 import { useTheme } from "./hooks/useTheme.js";
 import { useToast } from "./hooks/useToast.js";
 import { useDocumentMeta } from "./hooks/useDocumentMeta.js";
-import { CONFIG } from "./config.js";
 import { certifications, projects } from "./data/portfolio.js";
 
 const SCROLL_TOP_THRESHOLD = 620;
@@ -57,7 +56,6 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const cv = CONFIG.cv[lang];
   const handleCvDownload = () => notify(t.ui.downloadStarted, "info");
 
   const lightboxItem = useMemo(() => {
@@ -84,7 +82,7 @@ function App() {
       <NavBar theme={theme} onToggleTheme={toggleTheme} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <main id="main-content" tabIndex={-1}>
-        <Hero cv={cv} onDownloadCv={handleCvDownload} />
+        <Hero onDownloadCv={handleCvDownload} />
         <About />
         <Projects
           projects={translatedProjects}
@@ -92,7 +90,7 @@ function App() {
         />
         <Experience />
         <Certifications onOpenCertificate={(id, index) => setLightbox({ kind: "certificate", id, index })} />
-        <Contact cv={cv} onDownloadCv={handleCvDownload} notify={notify} theme={theme} />
+        <Contact onDownloadCv={handleCvDownload} notify={notify} theme={theme} />
       </main>
 
       <Footer />

@@ -288,6 +288,8 @@ export const translations = {
     ui: {
       skipToContent: "Aller au contenu",
       downloadStarted: "Téléchargement du CV en cours...",
+      cvMenuLabel: "Choisir la langue du CV",
+      cvVersions: { fr: "Version française", en: "Version anglaise" },
       changeThemeToDark: "Activer le thème sombre",
       changeThemeToLight: "Activer le thème clair",
       switchLanguage: "Switch to English",
@@ -589,6 +591,8 @@ export const translations = {
     ui: {
       skipToContent: "Skip to content",
       downloadStarted: "CV download started...",
+      cvMenuLabel: "Choose the CV language",
+      cvVersions: { fr: "French version", en: "English version" },
       changeThemeToDark: "Switch to dark theme",
       changeThemeToLight: "Switch to light theme",
       switchLanguage: "Passer en français",

@@ -1,12 +1,13 @@
-import { Copy, Download, Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Copy, Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import Section from "../components/Section.jsx";
+import CvDownloadMenu from "../components/CvDownloadMenu.jsx";
 import Turnstile from "../components/Turnstile.jsx";
 import { useLanguage } from "../LanguageContext.jsx";
 import { useContactForm } from "../hooks/useContactForm.js";
 import { CONFIG } from "../config.js";
 import { profile } from "../data/portfolio.js";
 
-export default function Contact({ cv, onDownloadCv, notify, theme }) {
+export default function Contact({ onDownloadCv, notify, theme }) {
   const { t, lang } = useLanguage();
   const text = t.contact;
   const { status, isSending, handleSubmit, captchaEnabled, setCaptchaToken, captchaResetKey } =
@@ -154,10 +155,7 @@ export default function Contact({ cv, onDownloadCv, notify, theme }) {
             <Send size={18} aria-hidden="true" />
             {isSending ? text.form.sending : text.form.submit}
           </button>
-          <a className="btn secondary" href={cv.href} download={cv.fileName} onClick={onDownloadCv}>
-            <Download size={18} aria-hidden="true" />
-            {text.form.cv}
-          </a>
+          <CvDownloadMenu label={text.form.cv} onDownload={onDownloadCv} placement="top" />
         </div>
       </form>
     </Section>

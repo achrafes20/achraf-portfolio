@@ -1,9 +1,10 @@
-import { Code2, Download } from "lucide-react";
+import { Code2 } from "lucide-react";
+import CvDownloadMenu from "../components/CvDownloadMenu.jsx";
 import HexGrid, { TECHNOLOGIES_COUNT } from "../components/HexGrid.jsx";
 import { useLanguage } from "../LanguageContext.jsx";
 import { PROFESSIONAL_EXPERIENCES, projects } from "../data/portfolio.js";
 
-export default function Hero({ cv, onDownloadCv }) {
+export default function Hero({ onDownloadCv }) {
   const { t } = useLanguage();
 
   const stats = [
@@ -51,10 +52,7 @@ export default function Hero({ cv, onDownloadCv }) {
               <Code2 size={18} aria-hidden="true" />
               {t.hero.projectsButton}
             </a>
-            <a className="btn secondary" href={cv.href} download={cv.fileName} onClick={onDownloadCv}>
-              <Download size={18} aria-hidden="true" />
-              {t.hero.cvButton}
-            </a>
+            <CvDownloadMenu label={t.hero.cvButton} onDownload={onDownloadCv} />
           </div>
 
           <ul className="hero-stats" aria-label={t.hero.statsLabel}>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Container, Github, ZoomIn } from "lucide-react";
+import { ChevronLeft, ChevronRight, Container, Github, Info, ZoomIn } from "lucide-react";
 import SmartImage from "./SmartImage.jsx";
 
 export default function ProjectCard({ project, text, onOpen }) {
@@ -61,7 +61,8 @@ export default function ProjectCard({ project, text, onOpen }) {
 
       <div className="project-body">
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        {/* Résumé court sur la carte ; la description complète est dans la visionneuse. */}
+        <p>{project.summary || project.description}</p>
         <div className="tech-stack">
           {project.tech.map((tech) => (
             <span className="tech-chip" key={tech}>
@@ -69,12 +70,23 @@ export default function ProjectCard({ project, text, onOpen }) {
             </span>
           ))}
         </div>
-        {project.repo && (
-          <a className="btn compact primary" href={project.repo} target="_blank" rel="noreferrer">
-            <LinkIcon size={17} aria-hidden="true" />
-            {isDocker ? text.dockerHub : text.sourceCode}
-          </a>
-        )}
+        <div className="project-actions">
+          {project.repo && (
+            <a className="btn compact primary" href={project.repo} target="_blank" rel="noreferrer">
+              <LinkIcon size={17} aria-hidden="true" />
+              {isDocker ? text.dockerHub : text.sourceCode}
+            </a>
+          )}
+          <button
+            type="button"
+            className="btn compact secondary"
+            aria-label={`${text.detailsLabel} — ${project.title}`}
+            onClick={() => onOpen(activeIndex)}
+          >
+            <Info size={17} aria-hidden="true" />
+            {text.details}
+          </button>
+        </div>
       </div>
     </article>
   );

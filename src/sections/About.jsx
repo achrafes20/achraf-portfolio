@@ -1,4 +1,4 @@
-import { BrainCircuit, Code2, Database, Layers3, Network, Server, Smartphone } from "lucide-react";
+import { Boxes, BrainCircuit, Code2, Database, Layers3, Network, Server, Smartphone } from "lucide-react";
 import Section from "../components/Section.jsx";
 import { useLanguage } from "../LanguageContext.jsx";
 import { skills } from "../data/portfolio.js";
@@ -11,20 +11,22 @@ const skillIcons = {
   mobile: Smartphone,
   ai: BrainCircuit,
   systems: Network,
+  sap: Boxes,
 };
 
 export default function About() {
   const { t } = useLanguage();
 
   return (
-    <Section id="about" title={t.about.title} subtitle={t.about.subtitle} className="about-layout">
+    <Section id="about" title={t.about.title} className="about-layout">
       <div className="about-copy">
         {t.about.bio.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
 
-      <ul className="skills-grid" aria-label={t.about.skillsLabel}>
+      {/* role="list" explicite : la liste reste annoncée même avec display: contents. */}
+      <ul className="skills-grid" role="list" aria-label={t.about.skillsLabel}>
         {skills.map((skill) => {
           const Icon = skillIcons[skill.key];
           return (

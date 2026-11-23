@@ -45,7 +45,7 @@ const svg = `
   <text x="80" y="150" font-size="28" fill="#28c3bd" font-family="Consolas, monospace" letter-spacing="2">PORTFOLIO</text>
   <text x="80" y="250" font-size="92" font-weight="700" fill="#f7fbff" font-family="Georgia, serif">Achraf Es-serrar</text>
   <text x="80" y="325" font-size="40" fill="#f97316" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Élève ingénieur Full-Stack &amp; DevOps</text>
-  <text x="80" y="385" font-size="27" fill="#b6c2cc" font-family="Segoe UI, Arial, sans-serif">ENSA Tétouan · Recherche un PFE de 6 mois dès janvier 2027</text>
+  <text x="80" y="385" font-size="27" fill="#b6c2cc" font-family="Segoe UI, Arial, sans-serif">ENSA Tétouan · Recherche un PFE de 6 mois dès janvier/février 2027</text>
   ${chips}
   <text x="80" y="568" font-size="25" fill="#71e6df" font-family="Consolas, monospace">esserrar-achraf.vercel.app</text>
 </svg>`;

@@ -115,6 +115,7 @@ export default function ProjectLightbox({ item, index, setIndex, onClose }) {
 
         <div className="lightbox-project-info">
           <h3 id="lightbox-project-title">{item.title}</h3>
+          {item.description && <p className="lightbox-description">{item.description}</p>}
           {item.tech?.length > 0 && (
             <div className="lightbox-tech-list">
               {item.tech.map((technology) => (

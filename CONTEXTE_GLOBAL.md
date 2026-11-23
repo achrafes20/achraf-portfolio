@@ -7,7 +7,7 @@
 
 Portfolio personnel d'**Achraf Es-serrar**, élève ingénieur en 5ᵉ année de Génie Informatique à
 l'ENSA de Tétouan (diplôme prévu en 2027), spécialisé en Full-Stack et DevOps. Il recherche un
-PFE de six mois à partir de janvier 2027.
+PFE de six mois à partir de janvier ou février 2027.
 
 - Site en ligne : <https://esserrar-achraf.vercel.app>
 - Application monopage bilingue **FR/EN**, thème **clair/sombre**, responsive.
@@ -77,13 +77,15 @@ scripts/
 - `src/translations.js` : ce qui se traduit, indexé par le même `id` : `title`, `description`,
   `tech` (si les tags se traduisent).
 
-Les chiffres du hero sont calculés : nombre de projets (17), nombre de technologies de la grille
+Les chiffres du hero sont calculés : nombre de projets (19), nombre de technologies de la grille
 hexagonale (22), nombre d'expériences en entreprise déduit de la chronologie (2).
 
-### Projets (17)
+### Projets (19)
 
 | Projet | Catégorie |
 |---|---|
+| InternTrack – gestion des stages & PFE (.NET 10) | Web |
+| ProcureFlow – achats & workflow SAP (CAP, Fiori) | Web |
 | Nutrition Risk Classifier | IA/ML |
 | AgileFlow | Web |
 | SGITU – microservices sécurisés | Web |
@@ -112,7 +114,7 @@ hexagonale (22), nombre d'expériences en entreprise déduit de la chronologie (
 ### Certifications
 
 IBM Applied DevOps Engineering, IBM Exploratory Data Analysis for ML, SAP Professional
-Fundamentals. Le lien du certificat SAP est vide (`link: null`) en attendant le lien de partage Coursera.
+Fundamentals, chacune avec son lien de vérification Coursera.
 
 ## 5. Comportements
 
@@ -148,7 +150,7 @@ et `Permissions-Policy`, ainsi qu'un cache long pour les assets.
 
 ## 7. Performance
 
-- Images : 27 Mo de PNG convertis en **4,1 Mo de WebP** (83 images, largeur ≤ 1600 px).
+- Images : 27 Mo de PNG convertis en **4,1 Mo de WebP** (95 images, largeur ≤ 1600 px).
 - `width`/`height` renseignés automatiquement (`SmartImage` + `image-sizes.json`) : pas de décalage de mise en page.
 - Chargement différé (`loading="lazy"`) des captures et des miniatures.
 - Logos servis localement : plus de dépendance à un CDN sans version figée.
@@ -163,7 +165,6 @@ données structurées `Person` (JSON-LD), `robots.txt`, `sitemap.xml`, `<noscrip
 ## 9. Points restant à traiter (hors code)
 
 1. Déployer la migration et la nouvelle fonction Edge (voir EMAIL_SETUP.md), et idéalement activer Turnstile.
-2. Renseigner le lien de partage du certificat SAP (`src/data/portfolio.js`).
-3. Vérifier l'URL LinkedIn : le site utilise `/in/achraf-es-serrar-300bb2279`, le CV `/in/esserrar-achraf`.
-4. Le CV indique la certification IBM DevOps « En cours », alors que le site affiche le certificat obtenu : mettre le CV à jour si elle est terminée.
-5. Pistes : tests automatisés (Vitest + Testing Library), pré-rendu HTML pour un meilleur référencement, Content-Security-Policy.
+2. Vérifier l'URL LinkedIn : le site utilise `/in/achraf-es-serrar-300bb2279`, le CV `/in/esserrar-achraf`.
+3. Le CV indique la certification IBM DevOps « En cours », alors que le site affiche le certificat obtenu : mettre le CV à jour si elle est terminée.
+4. Pistes : tests automatisés (Vitest + Testing Library), pré-rendu HTML pour un meilleur référencement, Content-Security-Policy.

@@ -17,18 +17,35 @@ export const sectionIds = ["home", "about", "projects", "experience", "certifica
 
 // Les technologies sont des noms propres : identiques en français et en anglais.
 export const skills = [
-  { key: "development", items: "Java, Python, TypeScript, JavaScript, C, C#, PHP, Dart" },
-  { key: "web", items: "React, Angular, Node.js, Laravel, ASP.NET, Tailwind CSS" },
-  { key: "systems", items: "Spring Boot, Spring Security, RabbitMQ, Kafka, WebSocket, TCP/TLS" },
-  { key: "infrastructure", items: "Docker, Kubernetes, Argo CD, GitHub Actions, Prometheus, Grafana, Loki" },
-  { key: "database", items: "PostgreSQL, MySQL, MongoDB, SQL Server, Oracle, Supabase" },
-  { key: "ai", items: "Python, XGBoost, scikit-learn, pandas, FastAPI, Streamlit" },
+  { key: "development", items: "Java, Python, TypeScript, JavaScript, C, C#, PHP" },
+  { key: "web", items: "React, Angular, Node.js, Laravel, ASP.NET Core, Tailwind CSS" },
+  { key: "systems", items: "Spring Boot, .NET / EF Core, RabbitMQ, Kafka, WebSocket, xUnit, Playwright, Testcontainers" },
+  { key: "infrastructure", items: "Docker, Kubernetes, Argo CD, GitHub Actions, Azure, Prometheus, Grafana, Loki" },
+  { key: "database", items: "PostgreSQL, MySQL, MongoDB, SQL Server, Oracle" },
+  { key: "ai", items: "XGBoost, scikit-learn, pandas, NumPy, FastAPI, Streamlit" },
   { key: "mobile", items: "Flutter, Dart, Riverpod, Supabase" },
+  { key: "sap", items: "SAP CAP, CDS, OData V4, SAPUI5⁠/⁠Fiori, SAP BTP, S/4HANA API" },
 ];
 
 export const filters = ["all", "web", "desktop", "game", "ml", "mobile"];
 
 export const projects = [
+  {
+    id: "interntrack",
+    category: "web",
+    badge: ".NET 10",
+    tech: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "EF Core", "Docker", "Azure"],
+    repo: "https://github.com/achrafes20/InternTrack",
+    images: Array.from({ length: 7 }, (_, index) => `/images/interntrack/img-${index + 1}.webp`),
+  },
+  {
+    id: "procureflow",
+    category: "web",
+    badge: "SAP CAP",
+    tech: ["SAP CAP", "CDS", "OData V4", "SAPUI5", "Fiori", "Node.js", "S/4HANA API", "SAP BTP"],
+    repo: "https://github.com/achrafes20/procureflow-sap-cap",
+    images: Array.from({ length: 5 }, (_, index) => `/images/procureflow/img-${index + 1}.webp`),
+  },
   {
     id: "nutrition-risk-classifier",
     category: "ml",
@@ -210,7 +227,7 @@ export const certifications = [
     id: "ibm-devops",
     title: "IBM Applied DevOps Engineering",
     issuer: "IBM / Coursera",
-    link: "https://coursera.org/share/c24ebd77981cf8828665d32987f161b0",
+    link: "https://coursera.org/share/ef5ca94fe908bf4c6be32ccfd2f6d14f",
     skills: [
       "OpenShift",
       "CI/CD",
@@ -229,7 +246,7 @@ export const certifications = [
     id: "machine-learning",
     title: "Exploratory Data Analysis for Machine Learning",
     issuer: "IBM / Coursera",
-    link: "https://coursera.org/share/92e680d8213d94b61e0f64a14b956acd",
+    link: "https://coursera.org/share/2d7953d70f87eac5f248c7d6e2e9a8bf",
     skills: [
       "Exploratory Data Analysis",
       "Feature Engineering",
@@ -245,9 +262,7 @@ export const certifications = [
     id: "sap-professional-fundamentals",
     title: "SAP Professional Fundamentals",
     issuer: "SAP / Coursera",
-    // À compléter avec le lien de partage Coursera (« Partager le certificat »).
-    // L'ancien lien (…/home/welcome) n'était accessible qu'au compte inscrit.
-    link: null,
+    link: "https://coursera.org/share/dd6f530f7c4c689445f3525134576089",
     skills: [
       "SAP Ecosystem",
       "Business Transformation",
